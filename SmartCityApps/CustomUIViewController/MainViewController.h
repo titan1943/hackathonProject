@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  SmartCityApps
 //
-//  Created by Titan Lai on 8/27/15.
+//  Created by Lee Ming Yeoh on 8/27/15.
 //  Copyright (c) 2015 Appster-Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainViewController : UIViewController
 
 @end
-

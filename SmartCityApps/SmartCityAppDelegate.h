@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface SmartCityAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void)setAndLoadMainPage;
++(SmartCityAppDelegate*) appDelegate;
 
 @end
 

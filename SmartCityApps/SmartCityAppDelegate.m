@@ -6,17 +6,48 @@
 //  Copyright (c) 2015 Appster-Inc. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "SmartCityAppDelegate.h"
+#import "SplashScreenViewController.h"
+#import "MainViewController.h"
 
-@interface AppDelegate ()
+@interface SmartCityAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation SmartCityAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //LeeMing Dev
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    [self.window makeKeyAndVisible];
+    
+    //Trace Font
+         NSString *family, *font;
+         NSString * resultFont;
+         NSString * resultString;
+         for (family in [UIFont familyNames])
+         {
+         resultString = [NSString stringWithFormat:@"\nFamily: %@\n", family];
+         resultFont = AppendString(resultFont, resultString);
+    
+    
+         for (font in [UIFont fontNamesForFamilyName:family])
+         {
+         resultString = [NSString stringWithFormat:@"Font: %@\n", font];
+         resultFont = AppendString(resultFont, resultString);
+         }
+         }
+         DLog(@"\n==========\n%@\n==========\n",resultFont);
+    
+    
+    SplashScreenViewController *mySplash = [[SplashScreenViewController alloc]initWithNibName:@"SplashScreenViewController" bundle:nil isRestart:NO];
+    [self.window setRootViewController:mySplash];
+
+    
     return YES;
 }
 
@@ -42,4 +73,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++(SmartCityAppDelegate*) appDelegate
+{
+    return (SmartCityAppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
+#pragma mark - self define methods
+-(void)setAndLoadMainPage
+{
+    MainViewController *myMainView = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
+
+    [self.window setRootViewController:myMainView];
+}
 @end

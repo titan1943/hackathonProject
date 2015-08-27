@@ -22,17 +22,26 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GothamRounded-Bold.ttf</string>
+		<string>GothamRounded-BoldItalic.ttf</string>
+		<string>GothamRounded-Book.ttf</string>
+		<string>GothamRounded-BookItalic.ttf</string>
+		<string>GothamRounded-Light.ttf</string>
+		<string>GothamRounded-LightItalic.ttf</string>
+		<string>GothamRounded-Medium.ttf</string>
+		<string>GothamRounded-MediumItalic.ttf</string>
+		<string>Margot Regular.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>

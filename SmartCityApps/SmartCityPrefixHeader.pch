@@ -1,0 +1,52 @@
+//
+//  SmartCityPrefixHeader.pch
+//  SmartCityApps
+//
+//  Created by Lee Ming Yeoh on 8/27/15.
+//  Copyright (c) 2015 Appster-Inc. All rights reserved.
+//
+
+#ifndef SmartCityApps_SmartCityPrefixHeader_pch
+#define SmartCityApps_SmartCityPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_5_AND_BELOW (IS_IPHONE && SCREEN_MIN_LENGTH == 320.0)
+
+#define IS_IPHONE_4_AND_BELOW (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+//#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+
+#define AppendString(A,B)    [((A)?(A):@"") stringByAppendingString:(B)]
+
+#define ConvertToActualDensity(A,B,C)    ((IS_IPHONE_5_AND_BELOW)?(A):((IS_IPHONE_6)?(B):C))
+
+#define ConvertSizeByDensity(A)    ((IS_IPHONE_5_AND_BELOW)?(A*320.0f/414.0f):((IS_IPHONE_6)?(A*320.0f/375.0f):A))
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#ifdef DEBUG
+#    define DLog(...) NSLog(__VA_ARGS__)
+#    define DBLog(...) NSLog(__VA_ARGS__)
+#else
+#    define DLog(...) //NSLog(__VA_ARGS__)
+#    define DBLog(...) //NSLog(__VA_ARGS__)
+#endif
+#define ALog(...) NSLog(__VA_ARGS__)
