@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E03B2851B8FA379003F8061 /* M2XClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2721B8FA379003F8061 /* M2XClient.m */; };
+		8E03B2861B8FA379003F8061 /* M2XClient+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2741B8FA379003F8061 /* M2XClient+HTTP.m */; };
+		8E03B2871B8FA379003F8061 /* M2XDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2761B8FA379003F8061 /* M2XDevice.m */; };
+		8E03B2881B8FA379003F8061 /* M2XDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2781B8FA379003F8061 /* M2XDistribution.m */; };
+		8E03B2891B8FA379003F8061 /* M2XKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B27A1B8FA379003F8061 /* M2XKey.m */; };
+		8E03B28A1B8FA379003F8061 /* M2XResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B27C1B8FA379003F8061 /* M2XResource.m */; };
+		8E03B28B1B8FA379003F8061 /* M2XResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B27E1B8FA379003F8061 /* M2XResponse.m */; };
+		8E03B28C1B8FA379003F8061 /* M2XStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2801B8FA379003F8061 /* M2XStream.m */; };
+		8E03B28D1B8FA379003F8061 /* M2XTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2821B8FA379003F8061 /* M2XTrigger.m */; };
+		8E03B28E1B8FA379003F8061 /* NSDate+M2X.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2841B8FA379003F8061 /* NSDate+M2X.m */; };
 		8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B2B1B8F4A86006A6616 /* MasterTableViewController.m */; };
 		8E243B2E1B8F4A86006A6616 /* MasterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E243B2C1B8F4A86006A6616 /* MasterTableViewController.xib */; };
 		8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B351B8F4B41006A6616 /* DetailViewController.m */; };
@@ -46,6 +56,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E03B2701B8FA379003F8061 /* M2X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2X.h; sourceTree = "<group>"; };
+		8E03B2711B8FA379003F8061 /* M2XClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XClient.h; sourceTree = "<group>"; };
+		8E03B2721B8FA379003F8061 /* M2XClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XClient.m; sourceTree = "<group>"; };
+		8E03B2731B8FA379003F8061 /* M2XClient+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "M2XClient+HTTP.h"; sourceTree = "<group>"; };
+		8E03B2741B8FA379003F8061 /* M2XClient+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "M2XClient+HTTP.m"; sourceTree = "<group>"; };
+		8E03B2751B8FA379003F8061 /* M2XDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XDevice.h; sourceTree = "<group>"; };
+		8E03B2761B8FA379003F8061 /* M2XDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XDevice.m; sourceTree = "<group>"; };
+		8E03B2771B8FA379003F8061 /* M2XDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XDistribution.h; sourceTree = "<group>"; };
+		8E03B2781B8FA379003F8061 /* M2XDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XDistribution.m; sourceTree = "<group>"; };
+		8E03B2791B8FA379003F8061 /* M2XKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XKey.h; sourceTree = "<group>"; };
+		8E03B27A1B8FA379003F8061 /* M2XKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XKey.m; sourceTree = "<group>"; };
+		8E03B27B1B8FA379003F8061 /* M2XResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XResource.h; sourceTree = "<group>"; };
+		8E03B27C1B8FA379003F8061 /* M2XResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XResource.m; sourceTree = "<group>"; };
+		8E03B27D1B8FA379003F8061 /* M2XResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XResponse.h; sourceTree = "<group>"; };
+		8E03B27E1B8FA379003F8061 /* M2XResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XResponse.m; sourceTree = "<group>"; };
+		8E03B27F1B8FA379003F8061 /* M2XStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XStream.h; sourceTree = "<group>"; };
+		8E03B2801B8FA379003F8061 /* M2XStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XStream.m; sourceTree = "<group>"; };
+		8E03B2811B8FA379003F8061 /* M2XTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2XTrigger.h; sourceTree = "<group>"; };
+		8E03B2821B8FA379003F8061 /* M2XTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XTrigger.m; sourceTree = "<group>"; };
+		8E03B2831B8FA379003F8061 /* NSDate+M2X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+M2X.h"; sourceTree = "<group>"; };
+		8E03B2841B8FA379003F8061 /* NSDate+M2X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+M2X.m"; sourceTree = "<group>"; };
 		8E243B2A1B8F4A86006A6616 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableViewController.h; sourceTree = "<group>"; };
 		8E243B2B1B8F4A86006A6616 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableViewController.m; sourceTree = "<group>"; };
 		8E243B2C1B8F4A86006A6616 /* MasterTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTableViewController.xib; sourceTree = "<group>"; };
@@ -107,6 +138,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E03B26E1B8FA348003F8061 /* BEMSimpleLineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				8E243B3E1B8F6737006A6616 /* BEMCircle.h */,
+				8E243B3F1B8F6737006A6616 /* BEMCircle.m */,
+				8E243B401B8F6737006A6616 /* BEMLine.h */,
+				8E243B411B8F6737006A6616 /* BEMLine.m */,
+				8E243B421B8F6737006A6616 /* BEMPermanentPopupView.h */,
+				8E243B431B8F6737006A6616 /* BEMPermanentPopupView.m */,
+				8E243B441B8F6737006A6616 /* BEMSimpleLineGraphView.h */,
+				8E243B451B8F6737006A6616 /* BEMSimpleLineGraphView.m */,
+			);
+			name = BEMSimpleLineGraph;
+			sourceTree = "<group>";
+		};
+		8E03B26F1B8FA35E003F8061 /* M2X Client */ = {
+			isa = PBXGroup;
+			children = (
+				8E03B2701B8FA379003F8061 /* M2X.h */,
+				8E03B2711B8FA379003F8061 /* M2XClient.h */,
+				8E03B2721B8FA379003F8061 /* M2XClient.m */,
+				8E03B2731B8FA379003F8061 /* M2XClient+HTTP.h */,
+				8E03B2741B8FA379003F8061 /* M2XClient+HTTP.m */,
+				8E03B2751B8FA379003F8061 /* M2XDevice.h */,
+				8E03B2761B8FA379003F8061 /* M2XDevice.m */,
+				8E03B2771B8FA379003F8061 /* M2XDistribution.h */,
+				8E03B2781B8FA379003F8061 /* M2XDistribution.m */,
+				8E03B2791B8FA379003F8061 /* M2XKey.h */,
+				8E03B27A1B8FA379003F8061 /* M2XKey.m */,
+				8E03B27B1B8FA379003F8061 /* M2XResource.h */,
+				8E03B27C1B8FA379003F8061 /* M2XResource.m */,
+				8E03B27D1B8FA379003F8061 /* M2XResponse.h */,
+				8E03B27E1B8FA379003F8061 /* M2XResponse.m */,
+				8E03B27F1B8FA379003F8061 /* M2XStream.h */,
+				8E03B2801B8FA379003F8061 /* M2XStream.m */,
+				8E03B2811B8FA379003F8061 /* M2XTrigger.h */,
+				8E03B2821B8FA379003F8061 /* M2XTrigger.m */,
+				8E03B2831B8FA379003F8061 /* NSDate+M2X.h */,
+				8E03B2841B8FA379003F8061 /* NSDate+M2X.m */,
+			);
+			name = "M2X Client";
+			sourceTree = "<group>";
+		};
 		8E243B291B8F49CA006A6616 /* SplitViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,14 +206,8 @@
 		8E243B3D1B8F6700006A6616 /* 3rd Party Framework */ = {
 			isa = PBXGroup;
 			children = (
-				8E243B3E1B8F6737006A6616 /* BEMCircle.h */,
-				8E243B3F1B8F6737006A6616 /* BEMCircle.m */,
-				8E243B401B8F6737006A6616 /* BEMLine.h */,
-				8E243B411B8F6737006A6616 /* BEMLine.m */,
-				8E243B421B8F6737006A6616 /* BEMPermanentPopupView.h */,
-				8E243B431B8F6737006A6616 /* BEMPermanentPopupView.m */,
-				8E243B441B8F6737006A6616 /* BEMSimpleLineGraphView.h */,
-				8E243B451B8F6737006A6616 /* BEMSimpleLineGraphView.m */,
+				8E03B26F1B8FA35E003F8061 /* M2X Client */,
+				8E03B26E1B8FA348003F8061 /* BEMSimpleLineGraph */,
 			);
 			name = "3rd Party Framework";
 			sourceTree = "<group>";
@@ -353,16 +421,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E03B2851B8FA379003F8061 /* M2XClient.m in Sources */,
+				8E03B2871B8FA379003F8061 /* M2XDevice.m in Sources */,
 				8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */,
+				8E03B2891B8FA379003F8061 /* M2XKey.m in Sources */,
 				8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */,
+				8E03B28A1B8FA379003F8061 /* M2XResource.m in Sources */,
 				8E243B3C1B8F561E006A6616 /* Chart.m in Sources */,
+				8E03B28C1B8FA379003F8061 /* M2XStream.m in Sources */,
+				8E03B28E1B8FA379003F8061 /* NSDate+M2X.m in Sources */,
 				8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */,
+				8E03B2861B8FA379003F8061 /* M2XClient+HTTP.m in Sources */,
 				8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */,
 				8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */,
+				8E03B2881B8FA379003F8061 /* M2XDistribution.m in Sources */,
+				8E03B28B1B8FA379003F8061 /* M2XResponse.m in Sources */,
 				8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */,
 				8E243B471B8F6737006A6616 /* BEMLine.m in Sources */,
 				8EAFEECE1B8F1915002DA889 /* main.m in Sources */,
 				9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */,
+				8E03B28D1B8FA379003F8061 /* M2XTrigger.m in Sources */,
 				9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

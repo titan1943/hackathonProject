@@ -64,6 +64,9 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = kColorLightBlue;
     
+    self.detailView.hidden = YES;
+    self.actionView.hidden = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,13 +125,24 @@
     
     [self.view addSubview:self.myGraph];
     
+    self.detailView.hidden = NO;
+    self.actionView.hidden = NO;
+    
     self.graphView.backgroundColor = kColorLightBlue;
     self.detailView.backgroundColor = kColorLightBlue;
     self.actionView.backgroundColor = kColorLightBlue;
 //    self.view.layer.borderColor = [UIColor blackColor].CGColor;
 //    self.view.layer.borderWidth = 1;
     
+    self.followUpButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.followUpButton.layer.borderWidth = 2;
+    self.followUpButton.layer.cornerRadius = 5;
+    self.followUpButton.clipsToBounds = YES;
     
+    self.setAlertLevel.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.setAlertLevel.layer.borderWidth = 2;
+    self.setAlertLevel.layer.cornerRadius = 5;
+    self.setAlertLevel.clipsToBounds = YES;
 }
 
 
