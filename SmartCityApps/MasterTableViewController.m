@@ -42,7 +42,10 @@
     
     [self.ChartArray addObject:chart2];
     
-    
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:170.0f/255.0f green:220.0f/255.0f blue:240.0f/255.0f alpha:1];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.455 green:0.259 blue:0.784 alpha:1.0];
+
     
 }
 
