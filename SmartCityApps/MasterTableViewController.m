@@ -31,13 +31,13 @@
     self.ChartArray = [[NSMutableArray alloc] init];
     
     Chart *chart1 = [[Chart alloc] init];
-    chart1.chartName = @"Bar Chart";
+    chart1.chartTitle = @"Bar Chart";
     chart1.chartType = BarChart;
     
     [self.ChartArray addObject:chart1];
     
     Chart *chart2 = [[Chart alloc] init];
-    chart2.chartName = @"Pie Chart";
+    chart2.chartTitle = @"Pie Chart";
     chart2.chartType = CircleChart;
     
     [self.ChartArray addObject:chart2];
@@ -71,13 +71,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"Chart 1";
+    Chart *chart = self.ChartArray[indexPath.row];
     
-    }
-    else if (indexPath.row == 1) {
-        cell.textLabel.text = @"Chart 2";
-    }
+    cell.textLabel.text = chart.chartTitle;
+
     
     return cell;
 }
@@ -86,9 +83,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-
+    Chart *chart = self.ChartArray[indexPath.row];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SelectChart" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SelectChart" object:chart];
 }
 
 

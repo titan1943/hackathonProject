@@ -12,6 +12,10 @@
 		8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B351B8F4B41006A6616 /* DetailViewController.m */; };
 		8E243B381B8F4B41006A6616 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E243B361B8F4B41006A6616 /* DetailViewController.xib */; };
 		8E243B3C1B8F561E006A6616 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B3B1B8F561E006A6616 /* Chart.m */; };
+		8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B3F1B8F6737006A6616 /* BEMCircle.m */; };
+		8E243B471B8F6737006A6616 /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B411B8F6737006A6616 /* BEMLine.m */; };
+		8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B431B8F6737006A6616 /* BEMPermanentPopupView.m */; };
+		8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B451B8F6737006A6616 /* BEMSimpleLineGraphView.m */; };
 		8EAFEECE1B8F1915002DA889 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFEECD1B8F1915002DA889 /* main.m */; };
 		8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFEED01B8F1915002DA889 /* SmartCityAppDelegate.m */; };
 		8EAFEED91B8F1915002DA889 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAFEED81B8F1915002DA889 /* Images.xcassets */; };
@@ -50,6 +54,14 @@
 		8E243B361B8F4B41006A6616 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		8E243B3A1B8F561E006A6616 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
 		8E243B3B1B8F561E006A6616 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
+		8E243B3E1B8F6737006A6616 /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
+		8E243B3F1B8F6737006A6616 /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
+		8E243B401B8F6737006A6616 /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
+		8E243B411B8F6737006A6616 /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
+		8E243B421B8F6737006A6616 /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		8E243B431B8F6737006A6616 /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPermanentPopupView.m; sourceTree = "<group>"; };
+		8E243B441B8F6737006A6616 /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		8E243B451B8F6737006A6616 /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
 		8EAFEEC81B8F1915002DA889 /* SmartCityApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCityApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFEECC1B8F1915002DA889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EAFEECD1B8F1915002DA889 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,6 +129,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8E243B3D1B8F6700006A6616 /* 3rd Party Framework */ = {
+			isa = PBXGroup;
+			children = (
+				8E243B3E1B8F6737006A6616 /* BEMCircle.h */,
+				8E243B3F1B8F6737006A6616 /* BEMCircle.m */,
+				8E243B401B8F6737006A6616 /* BEMLine.h */,
+				8E243B411B8F6737006A6616 /* BEMLine.m */,
+				8E243B421B8F6737006A6616 /* BEMPermanentPopupView.h */,
+				8E243B431B8F6737006A6616 /* BEMPermanentPopupView.m */,
+				8E243B441B8F6737006A6616 /* BEMSimpleLineGraphView.h */,
+				8E243B451B8F6737006A6616 /* BEMSimpleLineGraphView.m */,
+			);
+			name = "3rd Party Framework";
+			sourceTree = "<group>";
+		};
 		8EAFEEBF1B8F1915002DA889 = {
 			isa = PBXGroup;
 			children = (
@@ -138,15 +165,12 @@
 		8EAFEECA1B8F1915002DA889 /* SmartCityApps */ = {
 			isa = PBXGroup;
 			children = (
+				8E243B3D1B8F6700006A6616 /* 3rd Party Framework */,
 				9F8127521B8F4FAA0067AEC8 /* MainView */,
 				9F8127471B8F47960067AEC8 /* SplashScreen */,
 				8E243B391B8F55FD006A6616 /* Model */,
 				8E243B291B8F49CA006A6616 /* SplitViewController */,
-				8EAFEED21B8F1915002DA889 /* ViewController.h */,
-				8EAFEED31B8F1915002DA889 /* ViewController.m */,
-				8EAFEED51B8F1915002DA889 /* Main.storyboard */,
 				8EAFEED81B8F1915002DA889 /* Images.xcassets */,
-				8EAFEEDA1B8F1915002DA889 /* LaunchScreen.xib */,
 				8EAFEECB1B8F1915002DA889 /* Supporting Files */,
 			);
 			path = SmartCityApps;
@@ -157,7 +181,6 @@
 			children = (
 				9F8127531B8F50A30067AEC8 /* Fonts */,
 				9F936D0F1B8F3D93003B4B74 /* SmartCityPrefixHeader.pch */,
-				8EAFEED81B8F1915002DA889 /* Images.xcassets */,
 				8EAFEECF1B8F1915002DA889 /* SmartCityAppDelegate.h */,
 				8EAFEED01B8F1915002DA889 /* SmartCityAppDelegate.m */,
 				8EAFEECC1B8F1915002DA889 /* Info.plist */,
@@ -299,10 +322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EAFEED71B8F1915002DA889 /* Main.storyboard in Resources */,
 				8E243B2E1B8F4A86006A6616 /* MasterTableViewController.xib in Resources */,
 				8E243B381B8F4B41006A6616 /* DetailViewController.xib in Resources */,
-				8EAFEEDC1B8F1915002DA889 /* LaunchScreen.xib in Resources */,
 				8EAFEED91B8F1915002DA889 /* Images.xcassets in Resources */,
 				9F8127601B8F50B00067AEC8 /* GothamRounded-Light.ttf in Resources */,
 				9F8127651B8F52180067AEC8 /* Margot Regular.ttf in Resources */,
@@ -332,11 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */,
 				8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */,
 				8E243B3C1B8F561E006A6616 /* Chart.m in Sources */,
 				8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */,
-				8EAFEED41B8F1915002DA889 /* ViewController.m in Sources */,
+				8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */,
 				8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */,
+				8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */,
+				8E243B471B8F6737006A6616 /* BEMLine.m in Sources */,
 				8EAFEECE1B8F1915002DA889 /* main.m in Sources */,
 				9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */,
 				9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */,

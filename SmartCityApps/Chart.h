@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, ChartType) {
 
 @interface Chart : NSObject
 
-@property (strong, nonatomic) NSString *chartName;
+@property (strong, nonatomic) NSString *chartTitle;
 @property (nonatomic) ChartType chartType;
 
 @end

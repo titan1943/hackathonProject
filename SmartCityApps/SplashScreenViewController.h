@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define ANIM_IMAGE_TOTAL 64
-#define ANIM_TIME_INTERVAL 1.0f/20.0f
+#define ANIM_TIME_INTERVAL 1.0f/80.0f
 
 
 @interface SplashScreenViewController : UIViewController
