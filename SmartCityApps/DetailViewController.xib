@@ -72,15 +72,13 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VL-Y3-wr9" userLabel="Action View">
                     <rect key="frame" x="352" y="475" width="352" height="229"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-Ey-A3d">
-                            <rect key="frame" x="126" y="120" width="100" height="30"/>
-                            <state key="normal" title="Set Alert Level">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAt-OI-Nji">
+                            <rect key="frame" x="107" y="70" width="138" height="30"/>
+                            <state key="normal" title="Follow Up"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAt-OI-Nji">
-                            <rect key="frame" x="127" y="67" width="99" height="30"/>
-                            <state key="normal" title="Follow Up">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-Ey-A3d">
+                            <rect key="frame" x="102" y="120" width="148" height="30"/>
+                            <state key="normal" title="Set Alert Level">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
