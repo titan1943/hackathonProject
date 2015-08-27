@@ -6,11 +6,15 @@
 //  Copyright (c) 2015 Appster-Inc. All rights reserved.
 //
 
+<<<<<<< Updated upstream:SmartCityApps/SmartCityAppDelegate.m
 #import "SmartCityAppDelegate.h"
 #import "SplashScreenViewController.h"
 #import "MainViewController.h"
+=======
+#import "AppDelegate.h"
 #import "MasterTableViewController.h"
 #import "DetailViewController.h"
+>>>>>>> Stashed changes:SmartCityApps/AppDelegate.m
 
 @interface SmartCityAppDelegate ()
 
@@ -22,6 +26,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+<<<<<<< Updated upstream:SmartCityApps/SmartCityAppDelegate.m
     //LeeMing Dev
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
@@ -48,7 +53,31 @@
     
     SplashScreenViewController *mySplash = [[SplashScreenViewController alloc]initWithNibName:@"SplashScreenViewController" bundle:nil isRestart:NO];
     [self.window setRootViewController:mySplash];
+=======
+    
+    
+    
+    if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad) {
+        
+        MasterTableViewController *masterVC = [[MasterTableViewController alloc] initWithNibName:@"MasterTableViewController" bundle:nil];
+        
+        UINavigationController *navMaster = [[UINavigationController alloc] initWithRootViewController:masterVC];
+        
+        DetailViewController *detailVC = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        
+        UINavigationController *navDetail = [[UINavigationController alloc] initWithRootViewController:detailVC];
 
+        
+        UISplitViewController *splitVC = [[UISplitViewController alloc] init];
+        
+        splitVC.viewControllers = @[navMaster, navDetail];
+        
+        
+        [self.window setRootViewController:splitVC];
+        
+    }
+    
+>>>>>>> Stashed changes:SmartCityApps/AppDelegate.m
 
     
     return YES;
@@ -86,25 +115,8 @@
 #pragma mark - self define methods
 -(void)setAndLoadMainPage
 {
-    if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad) {
-        
-        MasterTableViewController *masterVC = [[MasterTableViewController alloc] initWithNibName:@"MasterTableViewController" bundle:nil];
-        
-        UINavigationController *navMaster = [[UINavigationController alloc] initWithRootViewController:masterVC];
-        
-        DetailViewController *detailVC = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-        
-        UINavigationController *navDetail = [[UINavigationController alloc] initWithRootViewController:detailVC];
-        
-        
-        UISplitViewController *splitVC = [[UISplitViewController alloc] init];
-        
-        splitVC.viewControllers = @[navMaster, navDetail];
-        
-        
-        [self.window setRootViewController:splitVC];
-        
-    }
-    
+    MainViewController *myMainView = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
+
+    [self.window setRootViewController:myMainView];
 }
 @end
