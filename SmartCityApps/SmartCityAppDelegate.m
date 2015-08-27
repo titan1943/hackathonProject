@@ -104,7 +104,10 @@
         splitVC.viewControllers = @[navMaster, navDetail];
         
         
+        
         [self.window setRootViewController:splitVC];
+        
+        
         
     }else
     {
@@ -122,5 +125,22 @@
 
     }
     
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    if (IS_IPAD)
+    {
+        return UIInterfaceOrientationLandscapeRight;
+    }
+    else
+    {
+        return UIInterfaceOrientationPortrait;
+    }
+ 
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
 }
 @end

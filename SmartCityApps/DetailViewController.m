@@ -10,6 +10,9 @@
 #import "Chart.h"
 #import "BEMSimpleLineGraphView.h"
 
+#import "M2XClient.h"
+#import "M2XClient+HTTP.h"
+
 #define kColorLightBlue [UIColor colorWithRed:95.0f/255.0f green:188.0f/255.0f blue:225.0f/255.0f alpha:1]
 
 @interface DetailViewController () <BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
@@ -67,7 +70,37 @@
     self.detailView.hidden = YES;
     self.actionView.hidden = YES;
     
+    
+    [self loadAndConfigureConnection];
+    
 }
+
+-(void)loadAndConfigureConnection
+{
+    if (!m2x)
+    {
+     m2x = [[M2XClient alloc] initWithApiKey:@"10a5dc53bd65a22ec65c943e77bdb77c"];
+    }
+
+}
+
+
+-(void)loadWaterMetreStream
+{
+    
+    
+    
+}
+
+
+-(void)loadTemperatureStream
+{
+    
+    
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
