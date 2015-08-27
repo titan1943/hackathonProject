@@ -12,6 +12,8 @@
 #import "MasterTableViewController.h"
 #import "DetailViewController.h"
 
+#import "PhoneMainViewController.h"
+
 @interface SmartCityAppDelegate ()
 
 @end
@@ -104,6 +106,20 @@
         
         [self.window setRootViewController:splitVC];
         
+    }else
+    {
+ 
+        PhoneMainViewController *myPhoneMain = [[PhoneMainViewController alloc]initWithNibName:@"PhoneMainViewController" bundle:nil];
+        
+         UINavigationController *myNavigationController = [[UINavigationController alloc]initWithRootViewController:myPhoneMain];
+        
+        [myNavigationController.view setBackgroundColor:[UIColor purpleColor]];
+        
+        
+        
+        [self.window setRootViewController:myNavigationController];
+        
+
     }
     
 }

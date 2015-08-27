@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartCityApps/SmartCityAppDelegate.m"
-            timestampString = "462378596.771897"
+            timestampString = "462394374.39373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-setAndLoadMainPage"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "+appDelegate"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

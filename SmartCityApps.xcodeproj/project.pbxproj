@@ -33,6 +33,11 @@
 		9F8127621B8F50B00067AEC8 /* GothamRounded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F81275A1B8F50B00067AEC8 /* GothamRounded-Medium.ttf */; };
 		9F8127631B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F81275B1B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf */; };
 		9F8127651B8F52180067AEC8 /* Margot Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F8127641B8F52180067AEC8 /* Margot Regular.ttf */; };
+		9F8127B41B8F92680067AEC8 /* PhoneMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127B21B8F92680067AEC8 /* PhoneMainViewController.m */; };
+		9F8127B51B8F92680067AEC8 /* PhoneMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8127B31B8F92680067AEC8 /* PhoneMainViewController.xib */; };
+		9F8127B81B8F95380067AEC8 /* LayoutSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127B71B8F95380067AEC8 /* LayoutSettings.m */; };
+		9F8127BC1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127BA1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m */; };
+		9F8127BD1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,14 @@
 		9F81275A1B8F50B00067AEC8 /* GothamRounded-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.ttf"; sourceTree = "<group>"; };
 		9F81275B1B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-MediumItalic.ttf"; sourceTree = "<group>"; };
 		9F8127641B8F52180067AEC8 /* Margot Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Margot Regular.ttf"; sourceTree = "<group>"; };
+		9F8127B11B8F92680067AEC8 /* PhoneMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneMainViewController.h; sourceTree = "<group>"; };
+		9F8127B21B8F92680067AEC8 /* PhoneMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneMainViewController.m; sourceTree = "<group>"; };
+		9F8127B31B8F92680067AEC8 /* PhoneMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneMainViewController.xib; sourceTree = "<group>"; };
+		9F8127B61B8F95380067AEC8 /* LayoutSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutSettings.h; sourceTree = "<group>"; };
+		9F8127B71B8F95380067AEC8 /* LayoutSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutSettings.m; sourceTree = "<group>"; };
+		9F8127B91B8F9F4E0067AEC8 /* CustomIssueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIssueTableViewCell.h; sourceTree = "<group>"; };
+		9F8127BA1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIssueTableViewCell.m; sourceTree = "<group>"; };
+		9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomIssueTableViewCell.xib; sourceTree = "<group>"; };
 		9F936D0F1B8F3D93003B4B74 /* SmartCityPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartCityPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +178,9 @@
 		8EAFEECA1B8F1915002DA889 /* SmartCityApps */ = {
 			isa = PBXGroup;
 			children = (
+				9F8127B61B8F95380067AEC8 /* LayoutSettings.h */,
+				9F8127B71B8F95380067AEC8 /* LayoutSettings.m */,
+				9F8127AF1B8F923A0067AEC8 /* iPhoneModule */,
 				8E243B3D1B8F6700006A6616 /* 3rd Party Framework */,
 				9F8127521B8F4FAA0067AEC8 /* MainView */,
 				9F8127471B8F47960067AEC8 /* SplashScreen */,
@@ -180,11 +196,11 @@
 			isa = PBXGroup;
 			children = (
 				9F8127531B8F50A30067AEC8 /* Fonts */,
-				9F936D0F1B8F3D93003B4B74 /* SmartCityPrefixHeader.pch */,
 				8EAFEECF1B8F1915002DA889 /* SmartCityAppDelegate.h */,
 				8EAFEED01B8F1915002DA889 /* SmartCityAppDelegate.m */,
 				8EAFEECC1B8F1915002DA889 /* Info.plist */,
 				8EAFEECD1B8F1915002DA889 /* main.m */,
+				9F936D0F1B8F3D93003B4B74 /* SmartCityPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -240,6 +256,27 @@
 				9F81275B1B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		9F8127AF1B8F923A0067AEC8 /* iPhoneModule */ = {
+			isa = PBXGroup;
+			children = (
+				9F8127B01B8F92490067AEC8 /* iPhoneMain */,
+			);
+			name = iPhoneModule;
+			sourceTree = "<group>";
+		};
+		9F8127B01B8F92490067AEC8 /* iPhoneMain */ = {
+			isa = PBXGroup;
+			children = (
+				9F8127B11B8F92680067AEC8 /* PhoneMainViewController.h */,
+				9F8127B21B8F92680067AEC8 /* PhoneMainViewController.m */,
+				9F8127B31B8F92680067AEC8 /* PhoneMainViewController.xib */,
+				9F8127B91B8F9F4E0067AEC8 /* CustomIssueTableViewCell.h */,
+				9F8127BA1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m */,
+				9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */,
+			);
+			name = iPhoneMain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,9 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8127B51B8F92680067AEC8 /* PhoneMainViewController.xib in Resources */,
 				8E243B2E1B8F4A86006A6616 /* MasterTableViewController.xib in Resources */,
 				8E243B381B8F4B41006A6616 /* DetailViewController.xib in Resources */,
 				8EAFEED91B8F1915002DA889 /* Images.xcassets in Resources */,
+				9F8127BD1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib in Resources */,
 				9F8127601B8F50B00067AEC8 /* GothamRounded-Light.ttf in Resources */,
 				9F8127651B8F52180067AEC8 /* Margot Regular.ttf in Resources */,
 				9F81275E1B8F50B00067AEC8 /* GothamRounded-Book.ttf in Resources */,
@@ -355,14 +394,17 @@
 			files = (
 				8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */,
 				8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */,
+				9F8127B41B8F92680067AEC8 /* PhoneMainViewController.m in Sources */,
 				8E243B3C1B8F561E006A6616 /* Chart.m in Sources */,
 				8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */,
 				8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */,
 				8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */,
 				8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */,
+				9F8127BC1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m in Sources */,
 				8E243B471B8F6737006A6616 /* BEMLine.m in Sources */,
 				8EAFEECE1B8F1915002DA889 /* main.m in Sources */,
 				9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */,
+				9F8127B81B8F95380067AEC8 /* LayoutSettings.m in Sources */,
 				9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
