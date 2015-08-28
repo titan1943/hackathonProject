@@ -10,4 +10,8 @@
 
 @interface CustomIssueTableViewCell : UITableViewCell
 
+@property (nonatomic , strong) IBOutlet UIImageView *myIconImgVIew;
+@property (nonatomic , strong) IBOutlet UILabel     *myArea;
+@property (nonatomic , strong) IBOutlet UILabel     *myLocation;
+
 @end

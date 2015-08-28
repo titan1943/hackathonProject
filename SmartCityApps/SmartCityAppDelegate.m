@@ -25,6 +25,7 @@
     // Override point for customization after application launch.
     
     //LeeMing Dev
+    [self configureCoreConnection];
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     [self.window makeKeyAndVisible];
@@ -126,6 +127,12 @@
     }
     
 }
+
+-(void)configureCoreConnection
+{
+    self.myCoreConnection = [[CoreConnection alloc]init];
+}
+
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     if (IS_IPAD)

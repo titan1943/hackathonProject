@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhoneMainViewController : UIViewController
-
+@interface PhoneMainViewController : UIViewController <UITableViewDataSource,UITableViewDelegate, UIAlertViewDelegate>
+{
+    IBOutlet UITableView *myTableView;
+    NSMutableArray *myDataRecords;
+}
 @end

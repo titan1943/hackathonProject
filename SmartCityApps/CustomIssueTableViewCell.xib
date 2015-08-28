@@ -3,9 +3,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Margot Regular.ttf">
+            <string>MargotRegular</string>
             <string>MargotRegular</string>
             <string>MargotRegular</string>
         </mutableArray>
@@ -13,34 +15,86 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="CustomIssueTableViewCell">
-            <rect key="frame" x="0.0" y="-1" width="320" height="100"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomIssueTableViewCell" rowHeight="155" id="KGk-i7-Jjw" customClass="CustomIssueTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-d0-oMJ">
-                        <rect key="frame" x="0.0" y="49" width="320" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cautions Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-tW-xhK">
+                        <rect key="frame" x="107" y="8" width="205" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="8zP-tD-wQ1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MargotRegular" family="Margot" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Fi-jw-aRj">
+                        <rect key="frame" x="8" y="8" width="83" height="83.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="83" id="Gtv-q7-1X2"/>
+                            <constraint firstAttribute="height" constant="83.5" id="ocx-Fk-rqU"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-jk-52V">
+                        <rect key="frame" x="8" y="97" width="304" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-RI-MBs">
-                                <rect key="frame" x="8" y="8" width="167" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advise and Descriptions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiB-rw-P3P">
+                                <rect key="frame" x="8" y="8" width="288" height="34"/>
                                 <fontDescription key="fontDescription" name="MargotRegular" family="Margot" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TiB-rw-P3P" secondAttribute="trailing" constant="8" id="KHS-Lo-t4A"/>
+                            <constraint firstAttribute="bottom" secondItem="TiB-rw-P3P" secondAttribute="bottom" constant="8" id="KZo-si-adb"/>
+                            <constraint firstItem="TiB-rw-P3P" firstAttribute="top" secondItem="4H1-jk-52V" secondAttribute="top" constant="8" id="R1b-Ns-42P"/>
+                            <constraint firstItem="TiB-rw-P3P" firstAttribute="leading" secondItem="4H1-jk-52V" secondAttribute="leading" constant="8" id="jrj-GU-cZY"/>
+                        </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Issue Area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-tW-xhK">
-                        <rect key="frame" x="8" y="8" width="160" height="33"/>
-                        <fontDescription key="fontDescription" name="MargotRegular" family="Margot" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-d0-oMJ">
+                        <rect key="frame" x="99" y="41" width="213" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location &amp; Area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-RI-MBs">
+                                <rect key="frame" x="8" y="8" width="197" height="34"/>
+                                <fontDescription key="fontDescription" name="MargotRegular" family="Margot" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r2g-RI-MBs" secondAttribute="trailing" constant="8" id="8V9-hx-z72"/>
+                            <constraint firstItem="r2g-RI-MBs" firstAttribute="leading" secondItem="hbg-d0-oMJ" secondAttribute="leading" constant="8" id="VHy-sC-rel"/>
+                            <constraint firstAttribute="height" constant="50" id="a8D-kf-VML"/>
+                            <constraint firstItem="r2g-RI-MBs" firstAttribute="top" secondItem="hbg-d0-oMJ" secondAttribute="top" constant="8" id="bFn-k9-1cI"/>
+                            <constraint firstAttribute="bottom" secondItem="r2g-RI-MBs" secondAttribute="bottom" constant="8" id="ffw-N5-yal"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="hbg-d0-oMJ" firstAttribute="leading" secondItem="2Fi-jw-aRj" secondAttribute="trailing" constant="8" id="1GZ-pN-H3D"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4H1-jk-52V" secondAttribute="bottom" constant="-0.5" id="4Mp-ni-yMe"/>
+                    <constraint firstItem="4H1-jk-52V" firstAttribute="top" secondItem="hbg-d0-oMJ" secondAttribute="bottom" constant="6" id="667-Kg-aNT"/>
+                    <constraint firstItem="2Fi-jw-aRj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="LnW-zl-W9u"/>
+                    <constraint firstItem="Fuo-tW-xhK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Qx7-M7-WTP"/>
+                    <constraint firstItem="4H1-jk-52V" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Qy0-eu-QKO"/>
+                    <constraint firstItem="hbg-d0-oMJ" firstAttribute="top" secondItem="Fuo-tW-xhK" secondAttribute="bottom" id="Vy9-rj-RCM"/>
+                    <constraint firstItem="hbg-d0-oMJ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ZHb-j2-XGk"/>
+                    <constraint firstItem="2Fi-jw-aRj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="h2g-am-6Rg"/>
+                    <constraint firstItem="Fuo-tW-xhK" firstAttribute="leading" secondItem="2Fi-jw-aRj" secondAttribute="trailing" constant="16" id="iCd-Ld-G4m"/>
+                    <constraint firstItem="Fuo-tW-xhK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="lLg-EM-vDw"/>
+                    <constraint firstItem="4H1-jk-52V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="uA2-Vf-brL"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="243" y="209"/>
+            <connections>
+                <outlet property="myIconImgVIew" destination="2Fi-jw-aRj" id="fWm-rV-LEa"/>
+            </connections>
+            <point key="canvasLocation" x="243" y="236.5"/>
         </tableViewCell>
     </objects>
 </document>

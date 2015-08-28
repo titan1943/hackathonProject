@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C3A9E7D1-E6B5-41D7-8A50-B95300179E46</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SmartCityApps</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>44737AFD9541EAFC5D1E2BA22D99E739E010BCBB</key>
 		<string>https://github.com/titan1943/hackathonProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SmartCityApps.xcodeproj</string>
+	<string>SmartCityApps.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>44737AFD9541EAFC5D1E2BA22D99E739E010BCBB</key>
