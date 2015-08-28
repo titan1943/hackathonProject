@@ -17,6 +17,7 @@
 		8E03B28C1B8FA379003F8061 /* M2XStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2801B8FA379003F8061 /* M2XStream.m */; };
 		8E03B28D1B8FA379003F8061 /* M2XTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2821B8FA379003F8061 /* M2XTrigger.m */; };
 		8E03B28E1B8FA379003F8061 /* NSDate+M2X.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2841B8FA379003F8061 /* NSDate+M2X.m */; };
+		8E03B2911B8FCE44003F8061 /* Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2901B8FCE44003F8061 /* Generic.m */; };
 		8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B2B1B8F4A86006A6616 /* MasterTableViewController.m */; };
 		8E243B2E1B8F4A86006A6616 /* MasterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E243B2C1B8F4A86006A6616 /* MasterTableViewController.xib */; };
 		8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B351B8F4B41006A6616 /* DetailViewController.m */; };
@@ -82,6 +83,8 @@
 		8E03B2821B8FA379003F8061 /* M2XTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2XTrigger.m; sourceTree = "<group>"; };
 		8E03B2831B8FA379003F8061 /* NSDate+M2X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+M2X.h"; sourceTree = "<group>"; };
 		8E03B2841B8FA379003F8061 /* NSDate+M2X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+M2X.m"; sourceTree = "<group>"; };
+		8E03B28F1B8FCE44003F8061 /* Generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generic.h; sourceTree = "<group>"; };
+		8E03B2901B8FCE44003F8061 /* Generic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generic.m; sourceTree = "<group>"; };
 		8E243B2A1B8F4A86006A6616 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableViewController.h; sourceTree = "<group>"; };
 		8E243B2B1B8F4A86006A6616 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableViewController.m; sourceTree = "<group>"; };
 		8E243B2C1B8F4A86006A6616 /* MasterTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTableViewController.xib; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 			children = (
 				8E243B3A1B8F561E006A6616 /* Chart.h */,
 				8E243B3B1B8F561E006A6616 /* Chart.m */,
+				8E03B28F1B8FCE44003F8061 /* Generic.h */,
+				8E03B2901B8FCE44003F8061 /* Generic.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E03B2851B8FA379003F8061 /* M2XClient.m in Sources */,
+				8E03B2911B8FCE44003F8061 /* Generic.m in Sources */,
 				8E03B2871B8FA379003F8061 /* M2XDevice.m in Sources */,
 				8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */,
 				8E03B2891B8FA379003F8061 /* M2XKey.m in Sources */,
@@ -591,6 +597,7 @@
 				INFOPLIST_FILE = SmartCityApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -605,6 +612,7 @@
 				INFOPLIST_FILE = SmartCityApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

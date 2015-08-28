@@ -13,6 +13,8 @@
 #import "M2XClient.h"
 #import "M2XClient+HTTP.h"
 
+#import "Generic.h"
+
 #define kColorLightBlue [UIColor colorWithRed:95.0f/255.0f green:188.0f/255.0f blue:225.0f/255.0f alpha:1]
 
 @interface DetailViewController () <BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
@@ -27,12 +29,15 @@
 //labels
 @property (strong, nonatomic) IBOutlet UILabel *currentValueLabel;
 @property (strong, nonatomic) IBOutlet UILabel *currentDateLabel;
-@property (strong, nonatomic) IBOutlet UILabel *averageLabel;
+@property (strong, nonatomic) IBOutlet UILabel *highestValueLabel;
 
 //buttons
 @property (strong, nonatomic) IBOutlet UIButton *followUpButton;
 @property (strong, nonatomic) IBOutlet UIButton *setAlertLevel;
 
+//data
+@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (nonatomic) float highestValue;
 
 @end
 
@@ -42,25 +47,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
-    self.arrayOfValues = [[NSMutableArray alloc] init];
-    
-    [self.arrayOfValues addObject:@(8)];
-    [self.arrayOfValues addObject:@(5)];
-    [self.arrayOfValues addObject:@(3)];
-    [self.arrayOfValues addObject:@(15)];
-    [self.arrayOfValues addObject:@(20)];
-    [self.arrayOfValues addObject:@(8)];
-
-    
-    self.arrayOfDates = [NSMutableArray new];
-    
-    [self.arrayOfDates addObject:@"Jan"];
-    [self.arrayOfDates addObject:@"Feb"];
-    [self.arrayOfDates addObject:@"Mar"];
-    [self.arrayOfDates addObject:@"Apr"];
-    [self.arrayOfDates addObject:@"Jun"];
-    [self.arrayOfDates addObject:@"Jul"];
+// Testing Data
+//    self.arrayOfValues = [[NSMutableArray alloc] init];
+//    
+//    [self.arrayOfValues addObject:@(8)];
+//    [self.arrayOfValues addObject:@(5)];
+//    [self.arrayOfValues addObject:@(3)];
+//    [self.arrayOfValues addObject:@(15)];
+//    [self.arrayOfValues addObject:@(20)];
+//    [self.arrayOfValues addObject:@(8)];
+//
+//    
+//    self.arrayOfDates = [NSMutableArray new];
+//    
+//    [self.arrayOfDates addObject:@"Jan"];
+//    [self.arrayOfDates addObject:@"Feb"];
+//    [self.arrayOfDates addObject:@"Mar"];
+//    [self.arrayOfDates addObject:@"Apr"];
+//    [self.arrayOfDates addObject:@"Jun"];
+//    [self.arrayOfDates addObject:@"Jul"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(SelectChart:) name:@"SelectChart" object:nil];
     
@@ -71,19 +76,116 @@
     self.actionView.hidden = YES;
     
     
-    [self loadAndConfigureConnection];
     
 }
 
 -(void)loadAndConfigureConnection
 {
-    if (!m2x)
-    {
-     m2x = [[M2XClient alloc] initWithApiKey:@"10a5dc53bd65a22ec65c943e77bdb77c"];
+    if (!m2x) {
+        m2x = [[M2XClient alloc] initWithApiKey:@"10a5dc53bd65a22ec65c943e77bdb77c"];
     }
+    
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    
+//    [dict setObject:@"1da670e96c843088ab8abcb1094c799d" forKey:@"devices"];
+//    [dict setObject:@"temperature" forKey:@"streams"];
+//    [dict setObject:@"100" forKey:@"limit"];
 
+    
+    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values", @"1da670e96c843088ab8abcb1094c799d", @"temperature"];
+    
+    [m2x getWithPath:str parameters:nil completionHandler:^(M2XResponse *response) {
+
+        
+        [self mapDictionaryToObject:response.json[@"values"]];
+        
+        NSLog(@"%ld", response.status);
+
+    }];
 }
 
+- (void)mapDictionaryToObject:(NSArray *)array{
+    
+    self.dataArray = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *dict in array) {
+        Generic *data = [[Generic alloc] init];
+        
+        data.value = dict[@"value"];
+        data.timestamp =[self convertDate:dict[@"timestamp"]];
+
+        
+        [self.dataArray addObject:data];
+        
+    }
+}
+
+- (NSString *)convertDate:(NSString *)dateString {
+    
+    
+    NSString *date = [dateString substringWithRange:NSMakeRange(5, 5)];
+    
+    
+    
+    return date;
+}
+
+- (NSString*)getQRCodeDateType:(NSString*)std
+{
+    NSDate *date = [self convertStringToDate:std];
+    
+    
+    NSDateFormatter *dateNewFormat = [[NSDateFormatter alloc]init];
+    [dateNewFormat setDateFormat:@"EEE, d LLLL yyyy"];
+    
+    NSString *newDateString = [dateNewFormat stringFromDate:date];
+    
+    return newDateString;
+}
+
+- (NSDate*)convertStringToDate:(NSString*)dateString
+{
+    if (!dateString||dateString.length<10) {
+        return nil;
+    }
+    
+    dateString = [dateString stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+    dateString = [dateString stringByReplacingOccurrencesOfString:@"Z" withString:@" "];
+
+    //DLog(@"date before convert = %@",dateString);
+    
+    
+    NSDateFormatter *dateFormatter = [self dateDefaultFormatter];
+    
+    //[dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+8"]];
+    
+    
+    
+    //[dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"]];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate * date = [[NSDate alloc] init];
+    date = [dateFormatter dateFromString:dateString];
+    
+    //DLog(@"date converted = %@",date);
+    return date;
+    
+}
+
+- (NSDateFormatter*)dateDefaultFormatter
+{
+    /*static dispatch_once_t pred = 0;
+     __strong static NSDateFormatter* formatter = nil;
+     dispatch_once(&pred, ^{
+     
+     });*/
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_GB"]];
+    
+    
+    return formatter;
+    
+}
 
 -(void)loadWaterMetreStream
 {
@@ -110,12 +212,13 @@
 #pragma mark - notification selector
 
 - (void)SelectChart:(NSNotification *)notification {
-//    NSLog(@"Chart selected!");
     
     Chart *chart = notification.object;
     
     self.title = chart.chartTitle;
     
+    [self loadAndConfigureConnection];
+
     [self createChart];
 }
 
@@ -176,34 +279,61 @@
     self.setAlertLevel.layer.borderWidth = 2;
     self.setAlertLevel.layer.cornerRadius = 5;
     self.setAlertLevel.clipsToBounds = YES;
+    
+//    NSMutableArray *arr = [self.dataArray valueForKey:@"value"];
+    
+//    NSNumber *asd1 = [arr valueForKeyPath:@"max"];
+//    NSNumber *asd2 = [arr valueForKeyPath:@"max.float"];
+//    NSNumber *asd3 = [arr valueForKeyPath:@"max.doubleValue"];
+
+    self.highestValueLabel.text = @"";
 }
 
 
 #pragma mark - SimpleLineGraph Data Source
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-    return (int)[self.arrayOfValues count];
+//    return (int)[self.arrayOfValues count];
+    return (int)[self.dataArray count];
+
 }
 
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
-    return [[self.arrayOfValues objectAtIndex:index] floatValue];
+//    return [[self.arrayOfValues objectAtIndex:index] floatValue];
+    
+    Generic *data = [self.dataArray objectAtIndex:index];
+    
+    if (self.highestValue < [data.value floatValue]) {
+        self.highestValue = [data.value floatValue];
+    }
+    
+    return [data.value floatValue];
+
 }
 
 
 #pragma mark - SimpleLineGraph Delegate
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
-    return 0;
+    return 1;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
-    NSString *label = [self.arrayOfDates objectAtIndex:index];
+//    NSString *label = [self.arrayOfDates objectAtIndex:index];
+//    return [label stringByReplacingOccurrencesOfString:@" " withString:@"\n"];
+    
+    NSString *label = ((Generic *)[self.dataArray objectAtIndex:index]).timestamp;
     return [label stringByReplacingOccurrencesOfString:@" " withString:@"\n"];
 }
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
-    self.currentValueLabel.text = [NSString stringWithFormat:@"%@", [self.arrayOfValues objectAtIndex:index]];
-    self.currentDateLabel.text = [NSString stringWithFormat:@"in %@", [self.arrayOfDates objectAtIndex:index]];
+//    self.currentValueLabel.text = [NSString stringWithFormat:@"%@", [self.arrayOfValues objectAtIndex:index]];
+//    self.currentDateLabel.text = [NSString stringWithFormat:@"in %@", [self.arrayOfDates objectAtIndex:index]];
+    
+    self.currentValueLabel.text = [NSString stringWithFormat:@"%@", ((Generic *)[self.dataArray objectAtIndex:index]).value];
+    self.currentDateLabel.text = [NSString stringWithFormat:@"in %@", ((Generic *)[self.dataArray objectAtIndex:index]).timestamp];
+
+    
 }
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
@@ -212,7 +342,7 @@
         self.currentDateLabel.alpha = 0.0;
     } completion:^(BOOL finished) {
         self.currentValueLabel.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-        self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", [self.arrayOfDates firstObject], [self.arrayOfDates lastObject]];
+        self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", ((Generic *)[self.dataArray firstObject]).timestamp, ((Generic *)[self.dataArray lastObject]).timestamp];
         
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.currentValueLabel.alpha = 1.0;
@@ -222,8 +352,13 @@
 }
 
 - (void)lineGraphDidFinishLoading:(BEMSimpleLineGraphView *)graph {
-    self.currentValueLabel.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-    self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", [self.arrayOfDates firstObject], [self.arrayOfDates lastObject]];
+//    self.currentValueLabel.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+//    self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", [self.arrayOfDates firstObject], [self.arrayOfDates lastObject]];
+    
+        self.currentValueLabel.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
+        self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", ((Generic *)[self.dataArray firstObject]).timestamp, ((Generic *)[self.dataArray lastObject]).timestamp];
+
+    self.highestValueLabel.text = [NSString stringWithFormat:@"%.f", self.highestValue];
 }
 
 /*
