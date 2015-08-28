@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "M2XClient.h"
 
 @interface DetailViewController : UIViewController
-
+{
+    M2XClient *m2x;
+}
 @end

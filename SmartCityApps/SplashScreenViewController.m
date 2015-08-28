@@ -55,7 +55,7 @@
 
 - (void)finishSplash
 {
-    [[SmartCityAppDelegate appDelegate] setAndLoadMainPage];
+[[SmartCityAppDelegate appDelegate] setAndLoadMainPage];
 }
 
 - (void)didReceiveMemoryWarning {

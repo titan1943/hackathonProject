@@ -21,10 +21,10 @@ all complex related connection methods.
 #import "ResponseObj.h"
 
 //Parsing Object
-#import "JobObject.h"
 
 
-typedef void (^GetJobsObjectCompletionHandler)(BOOL successFlag , NSArray*myJobArrys);
+
+typedef void (^GetIssuesObjectCompletionHandler)(BOOL successFlag , NSArray*myIssueArrys);
 
 @interface CoreConnection : NSObject
 {
@@ -35,6 +35,6 @@ typedef void (^GetJobsObjectCompletionHandler)(BOOL successFlag , NSArray*myJobA
 @property (nonatomic , strong) TalentHttpClient *client;
 
 
--(void)getJobsListing:(GetJobsObjectCompletionHandler)handler;
+-(void)getIssueListing:(GetIssuesObjectCompletionHandler)handler;
 
 @end

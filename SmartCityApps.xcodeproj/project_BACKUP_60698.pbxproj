@@ -30,9 +30,6 @@
 		8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFEED01B8F1915002DA889 /* SmartCityAppDelegate.m */; };
 		8EAFEED91B8F1915002DA889 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAFEED81B8F1915002DA889 /* Images.xcassets */; };
 		8EAFEEE81B8F1916002DA889 /* SmartCityAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFEEE71B8F1916002DA889 /* SmartCityAppsTests.m */; };
-		9F0F73441B8FD4EB00955B2F /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73431B8FD4EB00955B2F /* NSDictionary+Utilities.m */; };
-		9F0F73471B8FD6E800955B2F /* EmergencyObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73461B8FD6E800955B2F /* EmergencyObj.m */; };
-		9F0F734A1B8FEEC100955B2F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73491B8FEEC100955B2F /* MBProgressHUD.m */; };
 		9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127491B8F47AC0067AEC8 /* SplashScreenViewController.m */; };
 		9F81274C1B8F47AC0067AEC8 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F81274A1B8F47AC0067AEC8 /* SplashScreenViewController.xib */; };
 		9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F81274E1B8F4F990067AEC8 /* MainViewController.m */; };
@@ -46,6 +43,7 @@
 		9F8127621B8F50B00067AEC8 /* GothamRounded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F81275A1B8F50B00067AEC8 /* GothamRounded-Medium.ttf */; };
 		9F8127631B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F81275B1B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf */; };
 		9F8127651B8F52180067AEC8 /* Margot Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F8127641B8F52180067AEC8 /* Margot Regular.ttf */; };
+<<<<<<< HEAD
 		9F8127901B8F68BB0067AEC8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F81276A1B8F68BB0067AEC8 /* AFHTTPRequestOperation.m */; };
 		9F8127911B8F68BB0067AEC8 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F81276C1B8F68BB0067AEC8 /* AFHTTPRequestOperationManager.m */; };
 		9F8127921B8F68BB0067AEC8 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F81276E1B8F68BB0067AEC8 /* AFHTTPSessionManager.m */; };
@@ -68,11 +66,13 @@
 		9F8127A51B8F68F30067AEC8 /* CoreConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127A41B8F68F30067AEC8 /* CoreConnection.m */; };
 		9F8127A81B8F69970067AEC8 /* TalentHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127A71B8F69970067AEC8 /* TalentHttpClient.m */; };
 		9F8127AB1B8F69C80067AEC8 /* ResponseObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127AA1B8F69C80067AEC8 /* ResponseObj.m */; };
+=======
 		9F8127B41B8F92680067AEC8 /* PhoneMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127B21B8F92680067AEC8 /* PhoneMainViewController.m */; };
 		9F8127B51B8F92680067AEC8 /* PhoneMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8127B31B8F92680067AEC8 /* PhoneMainViewController.xib */; };
 		9F8127B81B8F95380067AEC8 /* LayoutSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127B71B8F95380067AEC8 /* LayoutSettings.m */; };
 		9F8127BC1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127BA1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m */; };
 		9F8127BD1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */; };
+>>>>>>> master
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,12 +132,6 @@
 		8EAFEEE11B8F1916002DA889 /* SmartCityAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartCityAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFEEE61B8F1916002DA889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EAFEEE71B8F1916002DA889 /* SmartCityAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartCityAppsTests.m; sourceTree = "<group>"; };
-		9F0F73421B8FD4EB00955B2F /* NSDictionary+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utilities.h"; sourceTree = "<group>"; };
-		9F0F73431B8FD4EB00955B2F /* NSDictionary+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utilities.m"; sourceTree = "<group>"; };
-		9F0F73451B8FD6E800955B2F /* EmergencyObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyObj.h; sourceTree = "<group>"; };
-		9F0F73461B8FD6E800955B2F /* EmergencyObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyObj.m; sourceTree = "<group>"; };
-		9F0F73481B8FEEC100955B2F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		9F0F73491B8FEEC100955B2F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		9F8127481B8F47AC0067AEC8 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		9F8127491B8F47AC0067AEC8 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		9F81274A1B8F47AC0067AEC8 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -153,6 +147,7 @@
 		9F81275A1B8F50B00067AEC8 /* GothamRounded-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.ttf"; sourceTree = "<group>"; };
 		9F81275B1B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-MediumItalic.ttf"; sourceTree = "<group>"; };
 		9F8127641B8F52180067AEC8 /* Margot Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Margot Regular.ttf"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		9F8127691B8F68BB0067AEC8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		9F81276A1B8F68BB0067AEC8 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		9F81276B1B8F68BB0067AEC8 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -197,6 +192,7 @@
 		9F8127A71B8F69970067AEC8 /* TalentHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentHttpClient.m; sourceTree = "<group>"; };
 		9F8127A91B8F69C80067AEC8 /* ResponseObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseObj.h; sourceTree = "<group>"; };
 		9F8127AA1B8F69C80067AEC8 /* ResponseObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseObj.m; sourceTree = "<group>"; };
+=======
 		9F8127B11B8F92680067AEC8 /* PhoneMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneMainViewController.h; sourceTree = "<group>"; };
 		9F8127B21B8F92680067AEC8 /* PhoneMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneMainViewController.m; sourceTree = "<group>"; };
 		9F8127B31B8F92680067AEC8 /* PhoneMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneMainViewController.xib; sourceTree = "<group>"; };
@@ -205,6 +201,7 @@
 		9F8127B91B8F9F4E0067AEC8 /* CustomIssueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIssueTableViewCell.h; sourceTree = "<group>"; };
 		9F8127BA1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIssueTableViewCell.m; sourceTree = "<group>"; };
 		9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomIssueTableViewCell.xib; sourceTree = "<group>"; };
+>>>>>>> master
 		9F936D0F1B8F3D93003B4B74 /* SmartCityPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartCityPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,8 +291,6 @@
 		8E243B3D1B8F6700006A6616 /* 3rd Party Framework */ = {
 			isa = PBXGroup;
 			children = (
-				9F0F73481B8FEEC100955B2F /* MBProgressHUD.h */,
-				9F0F73491B8FEEC100955B2F /* MBProgressHUD.m */,
 				8E03B26F1B8FA35E003F8061 /* M2X Client */,
 				8E03B26E1B8FA348003F8061 /* BEMSimpleLineGraph */,
 			);
@@ -323,21 +318,20 @@
 		8EAFEECA1B8F1915002DA889 /* SmartCityApps */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				9F8127661B8F68A70067AEC8 /* Connection */,
+=======
 				9F8127B61B8F95380067AEC8 /* LayoutSettings.h */,
 				9F8127B71B8F95380067AEC8 /* LayoutSettings.m */,
-				9F0F73421B8FD4EB00955B2F /* NSDictionary+Utilities.h */,
-				9F0F73431B8FD4EB00955B2F /* NSDictionary+Utilities.m */,
 				9F8127AF1B8F923A0067AEC8 /* iPhoneModule */,
 				8E243B3D1B8F6700006A6616 /* 3rd Party Framework */,
-				9F8127661B8F68A70067AEC8 /* Connection */,
+>>>>>>> master
 				9F8127521B8F4FAA0067AEC8 /* MainView */,
 				9F8127471B8F47960067AEC8 /* SplashScreen */,
 				8E243B391B8F55FD006A6616 /* Model */,
 				8E243B291B8F49CA006A6616 /* SplitViewController */,
 				8EAFEED81B8F1915002DA889 /* Images.xcassets */,
 				8EAFEECB1B8F1915002DA889 /* Supporting Files */,
-				9F0F73451B8FD6E800955B2F /* EmergencyObj.h */,
-				9F0F73461B8FD6E800955B2F /* EmergencyObj.m */,
 			);
 			path = SmartCityApps;
 			sourceTree = "<group>";
@@ -346,6 +340,10 @@
 			isa = PBXGroup;
 			children = (
 				9F8127531B8F50A30067AEC8 /* Fonts */,
+<<<<<<< HEAD
+				9F936D0F1B8F3D93003B4B74 /* SmartCityPrefixHeader.pch */,
+=======
+>>>>>>> master
 				8EAFEECF1B8F1915002DA889 /* SmartCityAppDelegate.h */,
 				8EAFEED01B8F1915002DA889 /* SmartCityAppDelegate.m */,
 				8EAFEECC1B8F1915002DA889 /* Info.plist */,
@@ -408,6 +406,7 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		9F8127661B8F68A70067AEC8 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,8 +480,7 @@
 				9F81278F1B8F68BB0067AEC8 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
-			sourceTree = "<group>";
-		};
+=======
 		9F8127AF1B8F923A0067AEC8 /* iPhoneModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +500,7 @@
 				9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */,
 			);
 			name = iPhoneMain;
+>>>>>>> master
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,7 +583,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+=======
 				9F8127B51B8F92680067AEC8 /* PhoneMainViewController.xib in Resources */,
+>>>>>>> master
 				8E243B2E1B8F4A86006A6616 /* MasterTableViewController.xib in Resources */,
 				8E243B381B8F4B41006A6616 /* DetailViewController.xib in Resources */,
 				8EAFEED91B8F1915002DA889 /* Images.xcassets in Resources */,
@@ -618,50 +620,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E03B2851B8FA379003F8061 /* M2XClient.m in Sources */,
-				8E03B2871B8FA379003F8061 /* M2XDevice.m in Sources */,
-				8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */,
-				8E03B2891B8FA379003F8061 /* M2XKey.m in Sources */,
+<<<<<<< HEAD
 				9F8127951B8F68BB0067AEC8 /* AFURLConnectionOperation.m in Sources */,
 				8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */,
-				9F8127B41B8F92680067AEC8 /* PhoneMainViewController.m in Sources */,
-				8E03B28A1B8FA379003F8061 /* M2XResource.m in Sources */,
 				9F8127A11B8F68BB0067AEC8 /* UIRefreshControl+AFNetworking.m in Sources */,
 				9F81279E1B8F68BB0067AEC8 /* UIButton+AFNetworking.m in Sources */,
 				9F8127A51B8F68F30067AEC8 /* CoreConnection.m in Sources */,
 				9F8127A01B8F68BB0067AEC8 /* UIProgressView+AFNetworking.m in Sources */,
+=======
+				8E03B2851B8FA379003F8061 /* M2XClient.m in Sources */,
+				8E03B2871B8FA379003F8061 /* M2XDevice.m in Sources */,
+				8E243B491B8F6737006A6616 /* BEMSimpleLineGraphView.m in Sources */,
+				8E03B2891B8FA379003F8061 /* M2XKey.m in Sources */,
+				8EAFEED11B8F1915002DA889 /* SmartCityAppDelegate.m in Sources */,
+				9F8127B41B8F92680067AEC8 /* PhoneMainViewController.m in Sources */,
+				8E03B28A1B8FA379003F8061 /* M2XResource.m in Sources */,
+>>>>>>> master
 				8E243B3C1B8F561E006A6616 /* Chart.m in Sources */,
 				8E03B28C1B8FA379003F8061 /* M2XStream.m in Sources */,
 				8E03B28E1B8FA379003F8061 /* NSDate+M2X.m in Sources */,
 				8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */,
-				8E03B2861B8FA379003F8061 /* M2XClient+HTTP.m in Sources */,
-				8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */,
+<<<<<<< HEAD
 				9F81279D1B8F68BB0067AEC8 /* UIAlertView+AFNetworking.m in Sources */,
 				9F8127971B8F68BB0067AEC8 /* AFURLResponseSerialization.m in Sources */,
 				8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */,
-				8E03B2881B8FA379003F8061 /* M2XDistribution.m in Sources */,
-				9F0F73471B8FD6E800955B2F /* EmergencyObj.m in Sources */,
-				8E03B28B1B8FA379003F8061 /* M2XResponse.m in Sources */,
-				8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */,
-				9F8127BC1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m in Sources */,
-				8E243B471B8F6737006A6616 /* BEMLine.m in Sources */,
 				9F8127961B8F68BB0067AEC8 /* AFURLRequestSerialization.m in Sources */,
 				9F81279F1B8F68BB0067AEC8 /* UIImageView+AFNetworking.m in Sources */,
 				9F8127941B8F68BB0067AEC8 /* AFSecurityPolicy.m in Sources */,
 				9F81279C1B8F68BB0067AEC8 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				9F0F734A1B8FEEC100955B2F /* MBProgressHUD.m in Sources */,
 				9F81279B1B8F68BB0067AEC8 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9F8127901B8F68BB0067AEC8 /* AFHTTPRequestOperation.m in Sources */,
 				9F8127981B8F68BB0067AEC8 /* AFURLSessionManager.m in Sources */,
+=======
+				8E03B2861B8FA379003F8061 /* M2XClient+HTTP.m in Sources */,
+				8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */,
+				8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */,
+				8E03B2881B8FA379003F8061 /* M2XDistribution.m in Sources */,
+				8E03B28B1B8FA379003F8061 /* M2XResponse.m in Sources */,
+				8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */,
+				9F8127BC1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m in Sources */,
+				8E243B471B8F6737006A6616 /* BEMLine.m in Sources */,
+>>>>>>> master
 				8EAFEECE1B8F1915002DA889 /* main.m in Sources */,
 				9F81279A1B8F68BB0067AEC8 /* README.md in Sources */,
 				9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */,
-				9F8127B81B8F95380067AEC8 /* LayoutSettings.m in Sources */,
-				8E03B28D1B8FA379003F8061 /* M2XTrigger.m in Sources */,
+<<<<<<< HEAD
 				9F8127921B8F68BB0067AEC8 /* AFHTTPSessionManager.m in Sources */,
 				9F8127AB1B8F69C80067AEC8 /* ResponseObj.m in Sources */,
+=======
+				9F8127B81B8F95380067AEC8 /* LayoutSettings.m in Sources */,
+				8E03B28D1B8FA379003F8061 /* M2XTrigger.m in Sources */,
+>>>>>>> master
 				9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */,
-				9F0F73441B8FD4EB00955B2F /* NSDictionary+Utilities.m in Sources */,
 				9F8127A21B8F68BB0067AEC8 /* UIWebView+AFNetworking.m in Sources */,
 				9F8127931B8F68BB0067AEC8 /* AFNetworkReachabilityManager.m in Sources */,
 				9F8127A81B8F69970067AEC8 /* TalentHttpClient.m in Sources */,

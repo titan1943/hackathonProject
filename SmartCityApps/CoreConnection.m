@@ -22,10 +22,10 @@ https://github.com/AFNetworking/AFNetworking/issues/1659
 
 
 #import "CoreConnection.h"
-#import <AFHTTPRequestOperationManager.h>
+#import "AFHTTPRequestOperationManager.h"
+#import "EmergencyObj.h"
 
-
-#define kConnectionJobs @"jobs"
+#define kConnectionsmartIssues @"smart/issues"
 
 @implementation CoreConnection
 
@@ -51,10 +51,11 @@ https://github.com/AFNetworking/AFNetworking/issues/1659
     
 }
 
--(void)getJobsListing:(GetJobsObjectCompletionHandler)handler
+
+-(void)getIssueListing:(GetIssuesObjectCompletionHandler)handler
 {
     
-    [_client GET:kConnectionJobs parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+    [_client GET:kConnectionsmartIssues parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
      {
          
          DLog(@"Print Jobs Data: %@", responseObject);
@@ -71,7 +72,7 @@ https://github.com/AFNetworking/AFNetworking/issues/1659
              NSMutableArray *mutableDataArrays = [NSMutableArray new];
              
              for (NSDictionary *objectDict in myRespond.dataContainer) {
-                 JobObject *myJobs = [[JobObject alloc]initWithDataDictionary:objectDict];
+                 EmergencyObj *myJobs = [[EmergencyObj alloc]initWithDictionary:objectDict];
                  [mutableDataArrays addObject:myJobs];
              }
              
@@ -85,14 +86,7 @@ https://github.com/AFNetworking/AFNetworking/issues/1659
          {
               handler(NO, Nil);
          }
-         
-         
-         
-    
-      
-         
-         
-         
+
      } failure:^(NSURLSessionDataTask *task, NSError *error){
          DLog(@"Print Jobs Data: %@", error);
          

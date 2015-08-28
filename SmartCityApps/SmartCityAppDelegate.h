@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreConnection.h"
 
 @interface SmartCityAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -14,6 +15,10 @@
 
 -(void)setAndLoadMainPage;
 +(SmartCityAppDelegate*) appDelegate;
+
+@property (nonatomic , strong) CoreConnection *myCoreConnection;
+
+ 
 
 @end
 

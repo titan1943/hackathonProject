@@ -12,6 +12,8 @@
 #import "MasterTableViewController.h"
 #import "DetailViewController.h"
 
+#import "PhoneMainViewController.h"
+
 @interface SmartCityAppDelegate ()
 
 @end
@@ -23,6 +25,7 @@
     // Override point for customization after application launch.
     
     //LeeMing Dev
+    [self configureCoreConnection];
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     [self.window makeKeyAndVisible];
@@ -102,9 +105,49 @@
         splitVC.viewControllers = @[navMaster, navDetail];
         
         
+        
         [self.window setRootViewController:splitVC];
         
+        
+        
+    }else
+    {
+ 
+        PhoneMainViewController *myPhoneMain = [[PhoneMainViewController alloc]initWithNibName:@"PhoneMainViewController" bundle:nil];
+        
+         UINavigationController *myNavigationController = [[UINavigationController alloc]initWithRootViewController:myPhoneMain];
+        
+        [myNavigationController.view setBackgroundColor:[UIColor purpleColor]];
+        
+        
+        
+        [self.window setRootViewController:myNavigationController];
+        
+
     }
     
+}
+
+-(void)configureCoreConnection
+{
+    self.myCoreConnection = [[CoreConnection alloc]init];
+}
+
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    if (IS_IPAD)
+    {
+        return UIInterfaceOrientationLandscapeRight;
+    }
+    else
+    {
+        return UIInterfaceOrientationPortrait;
+    }
+ 
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
 }
 @end
