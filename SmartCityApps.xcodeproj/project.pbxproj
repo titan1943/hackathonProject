@@ -34,6 +34,9 @@
 		9F0F73441B8FD4EB00955B2F /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73431B8FD4EB00955B2F /* NSDictionary+Utilities.m */; };
 		9F0F73471B8FD6E800955B2F /* EmergencyObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73461B8FD6E800955B2F /* EmergencyObj.m */; };
 		9F0F734A1B8FEEC100955B2F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73491B8FEEC100955B2F /* MBProgressHUD.m */; };
+		9F0F734D1B90077600955B2F /* ConstantFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F734C1B90077600955B2F /* ConstantFunction.m */; };
+		9F0F73511B9008EC00955B2F /* PhoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F734F1B9008EC00955B2F /* PhoneDetailViewController.m */; };
+		9F0F73521B9008EC00955B2F /* PhoneDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F73501B9008EC00955B2F /* PhoneDetailViewController.xib */; };
 		9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127491B8F47AC0067AEC8 /* SplashScreenViewController.m */; };
 		9F81274C1B8F47AC0067AEC8 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F81274A1B8F47AC0067AEC8 /* SplashScreenViewController.xib */; };
 		9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F81274E1B8F4F990067AEC8 /* MainViewController.m */; };
@@ -141,6 +144,11 @@
 		9F0F73461B8FD6E800955B2F /* EmergencyObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyObj.m; sourceTree = "<group>"; };
 		9F0F73481B8FEEC100955B2F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		9F0F73491B8FEEC100955B2F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9F0F734B1B90077600955B2F /* ConstantFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantFunction.h; sourceTree = "<group>"; };
+		9F0F734C1B90077600955B2F /* ConstantFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantFunction.m; sourceTree = "<group>"; };
+		9F0F734E1B9008EC00955B2F /* PhoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneDetailViewController.h; sourceTree = "<group>"; };
+		9F0F734F1B9008EC00955B2F /* PhoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneDetailViewController.m; sourceTree = "<group>"; };
+		9F0F73501B9008EC00955B2F /* PhoneDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneDetailViewController.xib; sourceTree = "<group>"; };
 		9F8127481B8F47AC0067AEC8 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		9F8127491B8F47AC0067AEC8 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		9F81274A1B8F47AC0067AEC8 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -328,6 +336,8 @@
 		8EAFEECA1B8F1915002DA889 /* SmartCityApps */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F734B1B90077600955B2F /* ConstantFunction.h */,
+				9F0F734C1B90077600955B2F /* ConstantFunction.m */,
 				9F8127B61B8F95380067AEC8 /* LayoutSettings.h */,
 				9F8127B71B8F95380067AEC8 /* LayoutSettings.m */,
 				9F0F73421B8FD4EB00955B2F /* NSDictionary+Utilities.h */,
@@ -505,6 +515,9 @@
 				9F8127B91B8F9F4E0067AEC8 /* CustomIssueTableViewCell.h */,
 				9F8127BA1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m */,
 				9F8127BB1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.xib */,
+				9F0F734E1B9008EC00955B2F /* PhoneDetailViewController.h */,
+				9F0F734F1B9008EC00955B2F /* PhoneDetailViewController.m */,
+				9F0F73501B9008EC00955B2F /* PhoneDetailViewController.xib */,
 			);
 			name = iPhoneMain;
 			sourceTree = "<group>";
@@ -601,6 +614,7 @@
 				9F8127631B8F50B00067AEC8 /* GothamRounded-MediumItalic.ttf in Resources */,
 				9F81275F1B8F50B00067AEC8 /* GothamRounded-BookItalic.ttf in Resources */,
 				9F8127991B8F68BB0067AEC8 /* LICENSE in Resources */,
+				9F0F73521B9008EC00955B2F /* PhoneDetailViewController.xib in Resources */,
 				9F8127621B8F50B00067AEC8 /* GothamRounded-Medium.ttf in Resources */,
 				9F8127511B8F4F990067AEC8 /* MainViewController.xib in Resources */,
 				9F81274C1B8F47AC0067AEC8 /* SplashScreenViewController.xib in Resources */,
@@ -651,9 +665,11 @@
 				8E243B461B8F6737006A6616 /* BEMCircle.m in Sources */,
 				9F8127BC1B8F9F4E0067AEC8 /* CustomIssueTableViewCell.m in Sources */,
 				8E243B471B8F6737006A6616 /* BEMLine.m in Sources */,
+				9F0F73511B9008EC00955B2F /* PhoneDetailViewController.m in Sources */,
 				9F8127961B8F68BB0067AEC8 /* AFURLRequestSerialization.m in Sources */,
 				9F81279F1B8F68BB0067AEC8 /* UIImageView+AFNetworking.m in Sources */,
 				9F8127941B8F68BB0067AEC8 /* AFSecurityPolicy.m in Sources */,
+				9F0F734D1B90077600955B2F /* ConstantFunction.m in Sources */,
 				9F81279C1B8F68BB0067AEC8 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9F0F734A1B8FEEC100955B2F /* MBProgressHUD.m in Sources */,
 				9F81279B1B8F68BB0067AEC8 /* AFNetworkActivityIndicatorManager.m in Sources */,

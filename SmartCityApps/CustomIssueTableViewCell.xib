@@ -92,7 +92,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="myCautionType" destination="Fuo-tW-xhK" id="KDz-bV-b4h"/>
                 <outlet property="myIconImgVIew" destination="2Fi-jw-aRj" id="fWm-rV-LEa"/>
+                <outlet property="myLocation" destination="r2g-RI-MBs" id="tDo-Fl-DVo"/>
+                <outlet property="mylblAdvise" destination="TiB-rw-P3P" id="eh0-OO-7WO"/>
             </connections>
             <point key="canvasLocation" x="243" y="236.5"/>
         </tableViewCell>

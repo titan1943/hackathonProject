@@ -34,7 +34,7 @@
                     <color key="textColor" red="0.92307374338624337" green="0.92307374338624337" blue="0.92307374338624337" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage City In Smarter Ways" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-EO-CIN">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smarter City, Smarter Us" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-EO-CIN">
                     <rect key="frame" x="8" y="291" width="584" height="58"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="58" id="l9k-la-mS5"/>
@@ -43,7 +43,7 @@
                     <color key="textColor" red="0.88012566137566139" green="0.88012566137566139" blue="0.88012566137566139" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ejw-Rv-AMt">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ejw-Rv-AMt">
                     <rect key="frame" x="290" y="357" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Ejw-Rv-AMt" secondAttribute="height" multiplier="1:1" id="M8W-Ao-al1"/>
@@ -59,7 +59,7 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.47843137254901963" green="0.25490196078431371" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.37254901960784315" green="0.73725490196078436" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="SJe-EO-CIN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="291" id="0zd-hy-k6J"/>
                 <constraint firstAttribute="bottom" secondItem="zT8-w8-Jbd" secondAttribute="bottom" id="2Tk-jB-Mi6"/>
@@ -75,6 +75,7 @@
                 <constraint firstItem="zT8-w8-Jbd" firstAttribute="top" secondItem="Ejw-Rv-AMt" secondAttribute="bottom" constant="24" id="dWX-sp-8zt"/>
                 <constraint firstItem="uAL-IH-sUg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fs3-zq-xw1"/>
                 <constraint firstAttribute="trailing" secondItem="5eP-do-DPe" secondAttribute="trailing" constant="8" id="hNb-Cy-p5n"/>
+                <constraint firstAttribute="centerX" secondItem="Ejw-Rv-AMt" secondAttribute="centerX" id="n8g-hg-0ge"/>
                 <constraint firstItem="5eP-do-DPe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="o5M-d1-TNI"/>
                 <constraint firstAttribute="trailing" secondItem="zT8-w8-Jbd" secondAttribute="trailing" id="upM-tp-Ew4"/>
                 <constraint firstItem="5eP-do-DPe" firstAttribute="top" secondItem="uAL-IH-sUg" secondAttribute="bottom" constant="23" id="xKU-sB-MbQ"/>

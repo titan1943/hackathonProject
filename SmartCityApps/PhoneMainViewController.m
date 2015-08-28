@@ -19,6 +19,10 @@
 
 #import "EmergencyObj.h"
 
+#import "ConstantFunction.h"
+
+#define kColorLightBlue [UIColor colorWithRed:95.0f/255.0f green:188.0f/255.0f blue:225.0f/255.0f alpha:1]
+
 @interface PhoneMainViewController ()
 
 @end
@@ -29,10 +33,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setTitle:@"Emergency Log"];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor purpleColor]];
-    [self.navigationController.navigationBar setTranslucent:NO];
 
+    
+    [self.navigationController.navigationBar setBarTintColor:kColorLightBlue];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    [self setUpRefreshButton];
+    
+}
+
+-(void)setUpRefreshButton
+{
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(addButton:)];
+    [addItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = addItem;
+    
+
+}
+
+-(void)addButton:(id)sender
+{
+    [self LoadIssueData];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -44,6 +65,14 @@
 -(void)LoadIssueData
 {
     
+    if (!HUD) {
+        HUD = [ConstantFunction initCustomHUD:self.view withDelegate:nil];
+    }
+    
+    if (HUD) {
+        [HUD show:YES];
+    }
+    
     [[SmartCityAppDelegate appDelegate].myCoreConnection getIssueListing:^(BOOL success, NSArray *array)
      {
          if (success)
@@ -53,6 +82,11 @@
              DLog(@"Trace Jobs Object Json Data : %@", array);
              
              myDataRecords = [[NSMutableArray alloc]initWithArray:array];
+             
+             if (HUD)
+             {
+                 [HUD hide:YES];
+             }
              
              [myTableView reloadData];
          }
@@ -80,7 +114,7 @@
     
     if([self respondsToSelector:@selector(edgesForExtendedLayout)]) self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    [self.view setBackgroundColor:[UIColor purpleColor]];
+    [self.view setBackgroundColor:kColorLightBlue];
     
 }
 
@@ -99,6 +133,15 @@
 {
     NSLog(@"Count: %lu", (unsigned long)[myDataRecords count]);
     //    return [self.datarecords count];
+    
+    
+    if (myDataRecords.count == 0)
+    {
+        [lblNoMsg setHidden:NO];
+    }else{
+        [lblNoMsg setHidden:YES];
+    }
+    
     return [myDataRecords count];
 }
 
@@ -129,13 +172,28 @@
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     EmergencyObj *myEmergencyObj = [myDataRecords objectAtIndex:indexPath.row];
     
-    NSString *myLocalStr = [NSString stringWithFormat:@"%@ %@", myEmergencyObj.myLocation, myEmergencyObj.myArea];
+    NSString *myLocalStr = [NSString stringWithFormat:@"%@ %@", myEmergencyObj.myArea,myEmergencyObj.myLocation];
     
     [cell.myLocation setText:myLocalStr];
-
     
+    [cell.mylblAdvise setText:@"bla bla bla"];
+    
+    [cell.myCautionType setText:myEmergencyObj.myCategory];
+    
+    
+    if ([myEmergencyObj.myCategory isEqualToString:@"FireWarning"])
+    {
+        [cell.myIconImgVIew setImage:[UIImage imageNamed:@"fireWarning"]];
+    
+    }
+    else
+    {
+        [cell.myIconImgVIew setImage:[UIImage imageNamed:@"floodwarning"]];
+    }
+
     return cell;
     
 }
@@ -145,7 +203,7 @@
 {
     NSLog(@"did selected %d", indexPath.row);
     
-    }
+}
 
 
 @end

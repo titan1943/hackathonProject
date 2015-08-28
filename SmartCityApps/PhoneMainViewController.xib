@@ -4,9 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="GothamRounded-Bold.ttf">
+            <string>GothamRounded-Bold</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneMainViewController">
             <connections>
+                <outlet property="lblNoMsg" destination="p4D-9D-V2Z" id="Pzb-9Q-pqE"/>
                 <outlet property="myTableView" destination="jnN-uI-L2i" id="09r-bc-quh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-uI-L2i">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-uI-L2i">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -24,12 +30,23 @@
                         <outlet property="delegate" destination="-1" id="wAl-il-DZB"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Notification At This Moments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4D-9D-V2Z">
+                    <rect key="frame" x="159" y="40" width="282" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="ByN-82-B6M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="jnN-uI-L2i" firstAttribute="top" secondItem="p4D-9D-V2Z" secondAttribute="bottom" constant="-67" id="3sV-dJ-BVo"/>
                 <constraint firstItem="jnN-uI-L2i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6QZ-qD-vYS"/>
                 <constraint firstAttribute="trailing" secondItem="jnN-uI-L2i" secondAttribute="trailing" id="dkm-UI-dbi"/>
                 <constraint firstAttribute="bottom" secondItem="jnN-uI-L2i" secondAttribute="bottom" id="iel-Vf-Vh9"/>
+                <constraint firstItem="jnN-uI-L2i" firstAttribute="centerX" secondItem="p4D-9D-V2Z" secondAttribute="centerX" id="rbh-SW-uqu"/>
                 <constraint firstItem="jnN-uI-L2i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="snM-xp-z26"/>
             </constraints>
         </view>

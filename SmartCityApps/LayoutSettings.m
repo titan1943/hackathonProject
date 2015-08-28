@@ -18,7 +18,7 @@
     UILabel * label = [LayoutSettings customNavigationLabel:title upperCase:flag];
     
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, label.frame.origin.x+label.frame.size.width, label.frame.size.height)];
-    [view setBackgroundColor:[UIColor purpleColor]];
+    [view setBackgroundColor:[UIColor clearColor]];
     [view addSubview:label];
     
     return view;
