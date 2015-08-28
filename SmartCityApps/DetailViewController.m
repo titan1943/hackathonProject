@@ -16,6 +16,8 @@
 #import "Generic.h"
 #import "MBProgressHUD.h"
 
+#import "FollowUpTableViewController.h"
+
 #define kColorLightBlue [UIColor colorWithRed:95.0f/255.0f green:188.0f/255.0f blue:225.0f/255.0f alpha:1]
 
 @interface DetailViewController () <BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
@@ -83,7 +85,7 @@
 -(void)loadAndConfigureConnection
 {
     if (!m2x) {
-        m2x = [[M2XClient alloc] initWithApiKey:@"10a5dc53bd65a22ec65c943e77bdb77c"];
+        m2x = [[M2XClient alloc] initWithApiKey:@"a6c5e2785b108db1dc8efc738aaa982b"];
     }
     
 //    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -93,14 +95,16 @@
 //    [dict setObject:@"100" forKey:@"limit"];
 
     
-    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values", @"1da670e96c843088ab8abcb1094c799d", @"temperature"];
+    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values.json", @"6575b33aa9f15b088a8a1f5c4931b111", @"meters"];
     
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Loading";
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
 
         [m2x getWithPath:str parameters:nil completionHandler:^(M2XResponse *response) {
             
+            id json = response.json;
             
             [self mapDictionaryToObject:response.json[@"values"]];
             
@@ -357,14 +361,20 @@
     self.highestValueLabel.text = [NSString stringWithFormat:@"%.f", self.highestValue];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)followUpClicked:(id)sender {
+    
+    FollowUpTableViewController *followUpVC = [[FollowUpTableViewController alloc] initWithNibName:@"FollowUpTableViewController" bundle:nil];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:followUpVC];
+    
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    [self.splitViewController presentViewController:nav animated:YES completion:nil];
 }
-*/
+
+- (IBAction)SetAlertClicked:(id)sender {
+    
+    
+}
 
 @end
