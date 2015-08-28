@@ -27,17 +27,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
- 
+    
     self.ChartArray = [[NSMutableArray alloc] init];
     
     Chart *chart1 = [[Chart alloc] init];
-    chart1.chartTitle = @"Bar Chart";
+    chart1.chartTitle = @"Water Sensor Chart";
     chart1.chartType = BarChart;
     
     [self.ChartArray addObject:chart1];
     
     Chart *chart2 = [[Chart alloc] init];
-    chart2.chartTitle = @"Pie Chart";
+    chart2.chartTitle = @"Fire Sensor Chart";
     chart2.chartType = CircleChart;
     
     [self.ChartArray addObject:chart2];
@@ -47,8 +47,14 @@
 //    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.455 green:0.259 blue:0.784 alpha:1.0];
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    self.title = @"Type Of Chart";
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -14,6 +14,7 @@
 #import "M2XClient+HTTP.h"
 
 #import "Generic.h"
+#import "MBProgressHUD.h"
 
 #define kColorLightBlue [UIColor colorWithRed:95.0f/255.0f green:188.0f/255.0f blue:225.0f/255.0f alpha:1]
 
@@ -94,14 +95,24 @@
     
     NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values", @"1da670e96c843088ab8abcb1094c799d", @"temperature"];
     
-    [m2x getWithPath:str parameters:nil completionHandler:^(M2XResponse *response) {
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
 
-        
-        [self mapDictionaryToObject:response.json[@"values"]];
-        
-        NSLog(@"%ld", response.status);
+        [m2x getWithPath:str parameters:nil completionHandler:^(M2XResponse *response) {
+            
+            
+            [self mapDictionaryToObject:response.json[@"values"]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.myGraph reloadGraph];
 
-    }];
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            });
+        }];
+    });
+
+   
 }
 
 - (void)mapDictionaryToObject:(NSArray *)array{
@@ -187,21 +198,6 @@
     
 }
 
--(void)loadWaterMetreStream
-{
-    
-    
-    
-}
-
-
--(void)loadTemperatureStream
-{
-    
-    
-    
-    
-}
 
 
 - (void)didReceiveMemoryWarning {
@@ -224,7 +220,7 @@
 
 - (void)createChart {
     
-    self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.graphView.frame) - 20, CGRectGetHeight(self.graphView.frame))];
+    self.myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(35, 35, CGRectGetWidth(self.graphView.frame) - 75, CGRectGetHeight(self.graphView.frame) - 35)];
     self.myGraph.delegate = self;
     self.myGraph.dataSource = self;
     
