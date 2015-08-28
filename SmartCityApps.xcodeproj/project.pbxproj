@@ -37,6 +37,7 @@
 		9F0F734D1B90077600955B2F /* ConstantFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F734C1B90077600955B2F /* ConstantFunction.m */; };
 		9F0F73511B9008EC00955B2F /* PhoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F734F1B9008EC00955B2F /* PhoneDetailViewController.m */; };
 		9F0F73521B9008EC00955B2F /* PhoneDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F73501B9008EC00955B2F /* PhoneDetailViewController.xib */; };
+		9F0F73551B9022A500955B2F /* CustomDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F73541B9022A500955B2F /* CustomDropShadowView.m */; };
 		9F81274B1B8F47AC0067AEC8 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8127491B8F47AC0067AEC8 /* SplashScreenViewController.m */; };
 		9F81274C1B8F47AC0067AEC8 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F81274A1B8F47AC0067AEC8 /* SplashScreenViewController.xib */; };
 		9F8127501B8F4F990067AEC8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F81274E1B8F4F990067AEC8 /* MainViewController.m */; };
@@ -149,6 +150,8 @@
 		9F0F734E1B9008EC00955B2F /* PhoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneDetailViewController.h; sourceTree = "<group>"; };
 		9F0F734F1B9008EC00955B2F /* PhoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneDetailViewController.m; sourceTree = "<group>"; };
 		9F0F73501B9008EC00955B2F /* PhoneDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneDetailViewController.xib; sourceTree = "<group>"; };
+		9F0F73531B9022A500955B2F /* CustomDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDropShadowView.h; sourceTree = "<group>"; };
+		9F0F73541B9022A500955B2F /* CustomDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDropShadowView.m; sourceTree = "<group>"; };
 		9F8127481B8F47AC0067AEC8 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		9F8127491B8F47AC0067AEC8 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		9F81274A1B8F47AC0067AEC8 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 		8EAFEECA1B8F1915002DA889 /* SmartCityApps */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F73531B9022A500955B2F /* CustomDropShadowView.h */,
+				9F0F73541B9022A500955B2F /* CustomDropShadowView.m */,
 				9F0F734B1B90077600955B2F /* ConstantFunction.h */,
 				9F0F734C1B90077600955B2F /* ConstantFunction.m */,
 				9F8127B61B8F95380067AEC8 /* LayoutSettings.h */,
@@ -647,6 +652,7 @@
 				9F8127B41B8F92680067AEC8 /* PhoneMainViewController.m in Sources */,
 				8E03B28A1B8FA379003F8061 /* M2XResource.m in Sources */,
 				9F8127A11B8F68BB0067AEC8 /* UIRefreshControl+AFNetworking.m in Sources */,
+				9F0F73551B9022A500955B2F /* CustomDropShadowView.m in Sources */,
 				9F81279E1B8F68BB0067AEC8 /* UIButton+AFNetworking.m in Sources */,
 				9F8127A51B8F68F30067AEC8 /* CoreConnection.m in Sources */,
 				9F8127A01B8F68BB0067AEC8 /* UIProgressView+AFNetworking.m in Sources */,

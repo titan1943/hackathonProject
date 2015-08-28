@@ -179,7 +179,41 @@
     
     [cell.myLocation setText:myLocalStr];
     
-    [cell.mylblAdvise setText:@"bla bla bla"];
+    
+    if ([myEmergencyObj.myCategory isEqualToString:@"FloodWarning"])
+    {
+         [cell.myCautionType setText:@"Low Risk"];
+         [cell.mylblAdvise setText:@"Low Risk, Unlikely to be flooded"];
+    }
+    else if ([myEmergencyObj.myCategory isEqualToString:@"FloodWarningTwo"])
+    {
+         [cell.myCautionType setText:@"Attention!"];
+         [cell.mylblAdvise setText:@"Flood might occurs if the water level continue raise."];
+    }
+    else if ([myEmergencyObj.myCategory isEqualToString:@"FloodWarningThree"])
+    {
+         [cell.myCautionType setText:@"At Risk!"];
+         [cell.mylblAdvise setText:@"Critical water level do take action now!"];
+    }
+    
+    
+    
+    [UIView animateWithDuration:1.0
+                          delay:0.0f
+                        options:UIViewAnimationCurveEaseInOut | UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                     animations:^{
+                         
+                         [cell.mylblAdvise setAlpha:0.0f];
+                         
+                         
+                     }
+                     completion:^(BOOL fin)
+     {
+         [cell.mylblAdvise setAlpha:1.0f];
+         
+     }];
+    
+    [UIView commitAnimations];
     
     [cell.myCautionType setText:myEmergencyObj.myCategory];
     
