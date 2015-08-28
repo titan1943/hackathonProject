@@ -16,6 +16,8 @@
 #import "Generic.h"
 #import "MBProgressHUD.h"
 
+#import "FollowUpTableViewController.h"
+
 #define kColorLightBlue [UIColor colorWithRed:95.0f/255.0f green:188.0f/255.0f blue:225.0f/255.0f alpha:1]
 
 @interface DetailViewController () <BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
@@ -39,6 +41,7 @@
 //data
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @property (nonatomic) float highestValue;
+@property (strong, nonatomic) Chart *chart;
 
 @end
 
@@ -82,9 +85,10 @@
 
 -(void)loadAndConfigureConnection
 {
-    if (!m2x) {
-        m2x = [[M2XClient alloc] initWithApiKey:@"10a5dc53bd65a22ec65c943e77bdb77c"];
-    }
+    
+        NSString *apiKey = [NSString stringWithFormat:@"%@", self.chart.chartType == WaterChart ? @"a6c5e2785b108db1dc8efc738aaa982b" : @"688e4cf2cacbeaede48c128750cd8213"];
+        
+        m2x = [[M2XClient alloc] initWithApiKey:apiKey];
     
 //    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
@@ -92,20 +96,28 @@
 //    [dict setObject:@"temperature" forKey:@"streams"];
 //    [dict setObject:@"100" forKey:@"limit"];
 
+    NSString *deviceID = self.chart.chartType == WaterChart ? @"6575b33aa9f15b088a8a1f5c4931b111" : @"1da670e96c843088ab8abcb1094c799d";
     
-    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values", @"1da670e96c843088ab8abcb1094c799d", @"temperature"];
+    NSString *streamID = self.chart.chartType == WaterChart ? @"meters" : @"temperature";
+
     
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values", deviceID, streamID];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Loading";
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
 
         [m2x getWithPath:str parameters:nil completionHandler:^(M2XResponse *response) {
             
+            id json = response.json;
             
             [self mapDictionaryToObject:response.json[@"values"]];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.myGraph reloadGraph];
+
+                [self createChart];
 
                 [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
             });
@@ -209,13 +221,12 @@
 
 - (void)SelectChart:(NSNotification *)notification {
     
-    Chart *chart = notification.object;
+    self.chart = notification.object;
     
-    self.title = chart.chartTitle;
+    self.title = self.chart.chartTitle;
     
     [self loadAndConfigureConnection];
 
-    [self createChart];
 }
 
 - (void)createChart {
@@ -352,19 +363,25 @@
 //    self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", [self.arrayOfDates firstObject], [self.arrayOfDates lastObject]];
     
         self.currentValueLabel.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-        self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", ((Generic *)[self.dataArray firstObject]).timestamp, ((Generic *)[self.dataArray lastObject]).timestamp];
+    self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", ((Generic *)[self.dataArray firstObject]).timestamp ? ((Generic *)[self.dataArray firstObject]).timestamp : @"-", ((Generic *)[self.dataArray lastObject]).timestamp ? ((Generic *)[self.dataArray lastObject]).timestamp : @"-"];
 
     self.highestValueLabel.text = [NSString stringWithFormat:@"%.f", self.highestValue];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)followUpClicked:(id)sender {
+    
+    FollowUpTableViewController *followUpVC = [[FollowUpTableViewController alloc] initWithNibName:@"FollowUpTableViewController" bundle:nil];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:followUpVC];
+    
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    [self.splitViewController presentViewController:nav animated:YES completion:nil];
 }
-*/
+
+- (IBAction)SetAlertClicked:(id)sender {
+    
+    
+}
 
 @end

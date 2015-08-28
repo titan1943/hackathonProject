@@ -18,6 +18,8 @@
 		8E03B28D1B8FA379003F8061 /* M2XTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2821B8FA379003F8061 /* M2XTrigger.m */; };
 		8E03B28E1B8FA379003F8061 /* NSDate+M2X.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2841B8FA379003F8061 /* NSDate+M2X.m */; };
 		8E03B2911B8FCE44003F8061 /* Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2901B8FCE44003F8061 /* Generic.m */; };
+		8E03B29A1B8FFA53003F8061 /* FollowUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B2981B8FFA53003F8061 /* FollowUpTableViewController.m */; };
+		8E03B29B1B8FFA53003F8061 /* FollowUpTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E03B2991B8FFA53003F8061 /* FollowUpTableViewController.xib */; };
 		8E243B2D1B8F4A86006A6616 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B2B1B8F4A86006A6616 /* MasterTableViewController.m */; };
 		8E243B2E1B8F4A86006A6616 /* MasterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E243B2C1B8F4A86006A6616 /* MasterTableViewController.xib */; };
 		8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E243B351B8F4B41006A6616 /* DetailViewController.m */; };
@@ -114,6 +116,9 @@
 		8E03B2841B8FA379003F8061 /* NSDate+M2X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+M2X.m"; sourceTree = "<group>"; };
 		8E03B28F1B8FCE44003F8061 /* Generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generic.h; sourceTree = "<group>"; };
 		8E03B2901B8FCE44003F8061 /* Generic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generic.m; sourceTree = "<group>"; };
+		8E03B2971B8FFA53003F8061 /* FollowUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowUpTableViewController.h; sourceTree = "<group>"; };
+		8E03B2981B8FFA53003F8061 /* FollowUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowUpTableViewController.m; sourceTree = "<group>"; };
+		8E03B2991B8FFA53003F8061 /* FollowUpTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowUpTableViewController.xib; sourceTree = "<group>"; };
 		8E243B2A1B8F4A86006A6616 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableViewController.h; sourceTree = "<group>"; };
 		8E243B2B1B8F4A86006A6616 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableViewController.m; sourceTree = "<group>"; };
 		8E243B2C1B8F4A86006A6616 /* MasterTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTableViewController.xib; sourceTree = "<group>"; };
@@ -283,6 +288,16 @@
 			name = "M2X Client";
 			sourceTree = "<group>";
 		};
+		8E03B2961B8FFA1D003F8061 /* Follow Up */ = {
+			isa = PBXGroup;
+			children = (
+				8E03B2971B8FFA53003F8061 /* FollowUpTableViewController.h */,
+				8E03B2981B8FFA53003F8061 /* FollowUpTableViewController.m */,
+				8E03B2991B8FFA53003F8061 /* FollowUpTableViewController.xib */,
+			);
+			name = "Follow Up";
+			sourceTree = "<group>";
+		};
 		8E243B291B8F49CA006A6616 /* SplitViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +358,7 @@
 				9F0F73541B9022A500955B2F /* CustomDropShadowView.m */,
 				9F0F734B1B90077600955B2F /* ConstantFunction.h */,
 				9F0F734C1B90077600955B2F /* ConstantFunction.m */,
+				8E03B2961B8FFA1D003F8061 /* Follow Up */,
 				9F8127B61B8F95380067AEC8 /* LayoutSettings.h */,
 				9F8127B71B8F95380067AEC8 /* LayoutSettings.m */,
 				9F0F73421B8FD4EB00955B2F /* NSDictionary+Utilities.h */,
@@ -621,6 +637,7 @@
 				9F8127991B8F68BB0067AEC8 /* LICENSE in Resources */,
 				9F0F73521B9008EC00955B2F /* PhoneDetailViewController.xib in Resources */,
 				9F8127621B8F50B00067AEC8 /* GothamRounded-Medium.ttf in Resources */,
+				8E03B29B1B8FFA53003F8061 /* FollowUpTableViewController.xib in Resources */,
 				9F8127511B8F4F990067AEC8 /* MainViewController.xib in Resources */,
 				9F81274C1B8F47AC0067AEC8 /* SplashScreenViewController.xib in Resources */,
 				9F81275D1B8F50B00067AEC8 /* GothamRounded-BoldItalic.ttf in Resources */,
@@ -660,6 +677,7 @@
 				8E03B28C1B8FA379003F8061 /* M2XStream.m in Sources */,
 				8E03B28E1B8FA379003F8061 /* NSDate+M2X.m in Sources */,
 				8E243B371B8F4B41006A6616 /* DetailViewController.m in Sources */,
+				8E03B29A1B8FFA53003F8061 /* FollowUpTableViewController.m in Sources */,
 				8E03B2861B8FA379003F8061 /* M2XClient+HTTP.m in Sources */,
 				8E243B481B8F6737006A6616 /* BEMPermanentPopupView.m in Sources */,
 				9F81279D1B8F68BB0067AEC8 /* UIAlertView+AFNetworking.m in Sources */,
