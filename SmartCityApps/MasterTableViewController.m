@@ -32,13 +32,13 @@
     
     Chart *chart1 = [[Chart alloc] init];
     chart1.chartTitle = @"Water Sensor Chart";
-    chart1.chartType = BarChart;
+    chart1.chartType = WaterChart;
     
     [self.ChartArray addObject:chart1];
     
     Chart *chart2 = [[Chart alloc] init];
     chart2.chartTitle = @"Fire Sensor Chart";
-    chart2.chartType = CircleChart;
+    chart2.chartType = FireChart;
     
     [self.ChartArray addObject:chart2];
     

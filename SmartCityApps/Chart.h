@@ -10,8 +10,8 @@
 
 
 typedef NS_ENUM(NSInteger, ChartType) {
-    BarChart,
-    CircleChart,
+    WaterChart,
+    FireChart,
     PieChart
 };
 

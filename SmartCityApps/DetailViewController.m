@@ -41,6 +41,7 @@
 //data
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @property (nonatomic) float highestValue;
+@property (strong, nonatomic) Chart *chart;
 
 @end
 
@@ -84,9 +85,10 @@
 
 -(void)loadAndConfigureConnection
 {
-    if (!m2x) {
-        m2x = [[M2XClient alloc] initWithApiKey:@"a6c5e2785b108db1dc8efc738aaa982b"];
-    }
+    
+        NSString *apiKey = [NSString stringWithFormat:@"%@", self.chart.chartType == WaterChart ? @"a6c5e2785b108db1dc8efc738aaa982b" : @"688e4cf2cacbeaede48c128750cd8213"];
+        
+        m2x = [[M2XClient alloc] initWithApiKey:apiKey];
     
 //    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
@@ -94,8 +96,12 @@
 //    [dict setObject:@"temperature" forKey:@"streams"];
 //    [dict setObject:@"100" forKey:@"limit"];
 
+    NSString *deviceID = self.chart.chartType == WaterChart ? @"6575b33aa9f15b088a8a1f5c4931b111" : @"1da670e96c843088ab8abcb1094c799d";
     
-    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values.json", @"6575b33aa9f15b088a8a1f5c4931b111", @"meters"];
+    NSString *streamID = self.chart.chartType == WaterChart ? @"meters" : @"temperature";
+
+    
+    NSString *str = [NSString stringWithFormat:@"/devices/%@/streams/%@/values", deviceID, streamID];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     hud.labelText = @"Loading";
@@ -110,6 +116,8 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.myGraph reloadGraph];
+
+                [self createChart];
 
                 [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
             });
@@ -213,13 +221,12 @@
 
 - (void)SelectChart:(NSNotification *)notification {
     
-    Chart *chart = notification.object;
+    self.chart = notification.object;
     
-    self.title = chart.chartTitle;
+    self.title = self.chart.chartTitle;
     
     [self loadAndConfigureConnection];
 
-    [self createChart];
 }
 
 - (void)createChart {
@@ -356,7 +363,7 @@
 //    self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", [self.arrayOfDates firstObject], [self.arrayOfDates lastObject]];
     
         self.currentValueLabel.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
-        self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", ((Generic *)[self.dataArray firstObject]).timestamp, ((Generic *)[self.dataArray lastObject]).timestamp];
+    self.currentDateLabel.text = [NSString stringWithFormat:@"between %@ and %@", ((Generic *)[self.dataArray firstObject]).timestamp ? ((Generic *)[self.dataArray firstObject]).timestamp : @"-", ((Generic *)[self.dataArray lastObject]).timestamp ? ((Generic *)[self.dataArray lastObject]).timestamp : @"-"];
 
     self.highestValueLabel.text = [NSString stringWithFormat:@"%.f", self.highestValue];
 }
